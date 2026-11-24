@@ -1,0 +1,2017 @@
+
+<!DOCTYPE html>
+<html lang="zxx">
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<head>
+    <!-- Meta Tag -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="copyright" content="pavilan" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+<style>
+  /* Remove margin and padding globally for the footer */
+  #footer {
+    margin: 0;
+    padding: 0;
+    margin-left: -16%;
+    width: 100vw;
+    background-color: #f8f8f8; /* optional: give it a background color */
+  }
+
+  /* Remove Bootstrap container padding if you're using Bootstrap */
+  #footer .container {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  /* Optional: make the row span the full width */
+  #footer .row {
+    margin: 0;
+  }
+
+  /* Optional: Remove gutter between columns */
+  #footer .col-lg-3,
+  #footer .col-md-6,
+  #footer .col-12 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+header.header {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  background-color: #fff;
+}
+
+  /* Optional: Adjust spacing inside columns if needed */
+  #footer .single-footer {
+    padding: 20px; /* Or less/more depending on your preference */
+  }
+</style><style>
+  @media (max-width: 767px) {
+  .header-inner {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    background-color: rgb(232, 175, 5);
+  }
+}
+
+  @media screen and (max-width: 768px) {
+    /* Remove margin and padding globally for the footer */
+    #footer {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      background-color: #f8f8f8; /* optional: give it a background color */
+    }
+
+    /* Remove Bootstrap container padding if you're using Bootstrap */
+    #footer .container {
+      margin: 0 auto;
+      padding: 0;
+      max-width: 100%;
+      width: 100%;
+    }
+
+    /* Make the row span the full width */
+    #footer .row {
+      margin: 0;
+    }
+
+    /* Remove gutter between columns */
+    #footer .col-lg-3,
+    #footer .col-md-6,
+    #footer .col-12 {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    /* Adjust spacing inside columns */
+    #footer .single-footer {
+      padding: 20px;
+    }
+  }
+</style>
+
+
+    <!-- Title -->
+    <title></title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/favicon.png" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- Nice Select CSS -->
+    <link rel="stylesheet" href="css/nice-select.css" />
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <!-- icofont CSS -->
+    <link rel="stylesheet" href="css/icofont.css" />
+    <!-- Slicknav -->
+    <link rel="stylesheet" href="css/slicknav.min.css" />
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="css/owl-carousel.css" />
+    <!-- Datepicker CSS -->
+    <link rel="stylesheet" href="css/datepicker.css" />
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="css/animate.min.css" />
+    <!-- Magnific Popup CSS -->
+    <link rel="stylesheet" href="css/magnific-popup.css" />
+
+    <!-- Mediplus CSS -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+
+    <!-- Color CSS -->
+    <link rel="stylesheet" href="css/color/color1.css" />
+
+    <link rel="stylesheet" id="colors" />
+  </head>
+  <body>
+    <!-- Preloader -->
+    <div class="preloader">
+      <div class="loader">
+        <div class="loader-outter"></div>
+        <div class="loader-inner"></div>
+
+        <div class="indicator">
+            <!-- <svg width="16px" height="12px">
+              <polyline id="back" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+              <polyline
+                id="front"
+                points="1 6 4 6 6 11 10 1 12 6 15 6"
+              ></polyline>
+            </svg> -->
+        </div>
+      </div>
+    </div>
+    <!-- End Preloader -->
+
+    <!-- Mediplus Color Plate -->
+    <!-- <div class="color-plate">
+      <a class="color-plate-icon"><i class="fa fa-cog fa-spin"></i></a>
+      <h4>Mediplus</h4>
+      <p>Here is some awesome color's available on Mediplus Template.</p>
+      <span class="color1"></span>
+      <span class="color2"></span>
+      <span class="color3"></span>
+      <span class="color4"></span>
+      <span class="color5"></span>
+      <span class="color6"></span>
+      <span class="color7"></span>
+      <span class="color8"></span>
+      <span class="color9"></span>
+      <span class="color10"></span>
+      <span class="color11"></span>
+      <span class="color12"></span>
+      <div class="rtl-version">
+        <h4>RTL Version</h4>
+        <ul class="option-box">
+          <li class="rtl-btn">RTL Version</li>
+          <li class="ltr-btn active">LTR Version</li>
+        </ul>
+      </div>
+    </div> -->
+    <!-- /End Color Plate -->
+
+    <!-- Header Area -->
+    <header class="header">
+      <!-- Topbar -->
+      <div class="topbar">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 col-md-5 col-12">
+           
+              <ul class="top-link">
+                <li><a href="about.html">About</a></li>
+                <li><a href="doctor-details.html">Doctors</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <!-- <li><a href="faq.html">FAQ</a></li> -->
+              </ul>
+           
+            </div>
+            <div class="col-lg-6 col-md-7 col-12">
+          
+              <ul class="top-contact">
+                <li><i class="fa fa-phone"></i><a href="9444469179">9444469179</a></li>
+                <li>
+                  <i class="fa fa-envelope"></i
+                  ><a href="mailto:devashik559@gmail.com"
+                    >ganapu86@gmail.com</a
+                  >
+                </li>
+              </ul>
+        
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Topbar -->
+      <!-- Header Inner -->
+      <div class="header-inner" style="background-color: rgb(232, 175, 5);">
+        <div class="container">
+          <div class="inner">
+            <div class="row align-items-center">
+              <div class="col-lg-3 col-md-3 col-12">
+                <!-- Start Logo -->
+                <div class="logo">
+                  <a href="index.html"><img src="dr vg kideny logo.png" alt="#" /></a>
+                </div>
+                <!-- End Logo -->
+                <!-- Mobile Nav -->
+                <div class="mobile-nav"></div>
+                <!-- End Mobile Nav -->
+              </div>
+              <div class="col-lg-7 col-md-9 col-12">
+                <!-- Main Menu -->
+                <div class="main-menu">
+                  <nav class="navigation">
+                    <ul class="nav menu">
+                      <li class="active">
+                        <a href="index.html"
+                          >Home 
+                       
+                      </a>
+                        <!-- <ul class="dropdown">
+                          <li class="active">
+                            <a href="index.html">Home Page 1</a>
+                          </li>
+                        
+                        </ul> -->
+                      </li>
+                      <li>
+                        <a href="doctor-details.html"
+                          >Doctors 
+                       </a>
+                        
+                      </li>
+                      <li>
+                        <a href="#"
+                          >Services <i class="icofont-rounded-down"></i
+                        ></a>
+                         <ul class="dropdown">
+                         
+                            <a href="service.html">Service Details</a>
+                          </li>
+                          <li>
+                            <a href="kidny.html">Kidney Stone</a>
+                          </li>
+                          <li>
+                            <a href="prostate.html">Prostate Problems</a>
+                          </li>
+                          <li>
+                            <a href="ANDROLOGY.html">Andrology
+</a>
+                          </li>
+                          <li>
+                            <a href="male .html">Male Infertility
+</a>
+                          </li>
+                          <li>
+                            <a href="pedia.html">Pediatric urology</a>
+                          </li>
+                          <li>
+                            <a href="urage.html">Urogynaecology</a>
+                          </li>
+                       
+                        </ul>
+                      </li>
+                      <!-- blog start -->
+                      <li>
+                        <a href="#"
+                          >gallery <i class="icofont-rounded-down"></i
+                        ></a>
+                         <ul class="dropdown">
+                          <li><a href="news.html">News</a></li>
+                          <li>
+                            <a href="events.html">Event</a>
+                          </li>
+                          <li>
+                            <a href="publication.html">publication</a>
+                          </li>
+                          <li>
+                            <a href="interview.html">interviews</a>
+                          </li>
+                         
+                          
+                       
+                        </ul>
+
+                      </li>
+                      
+                      <li><a href="about.html">About Us</a></li>
+                      <!-- <li>
+                        <a href="#"
+                          >Pages <i class="icofont-rounded-down"></i
+                        ></a>
+                        <ul class="dropdown">
+                          <li><a href="about.html">About Us</a></li>
+                          <li><a href="appointment.html">Appointment</a></li>
+                          <li><a href="time-table.html">Time Table</a></li>
+                          <li><a href="testimonials.html">Testimonials</a></li>
+                          <li><a href="pricing.html">Our Pricing</a></li>
+                          <li><a href="register.html">Sign Up</a></li>
+                          <li><a href="login.html">Login</a></li>
+                          <li><a href="faq.html">Faq</a></li>
+                          <li><a href="mail-success.html">Mail Success</a></li>
+                          <li><a href="404.html">404 Error</a></li>
+                        </ul>
+                      </li> -->
+                
+                      <!-- <li>
+                        <a href="#"
+                          >Blogs <i class="icofont-rounded-down"></i
+                        ></a>
+                        <ul class="dropdown">
+                          <li><a href="blog-grid.html">Blog Grid</a></li>
+                          <li><a href="blog-grid.html">Blog Details</a></li>
+                        </ul>
+                      </li> -->
+                      <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                  </nav>
+                </div>
+                <!--/ End Main Menu -->
+              </div>
+              <div class="col-lg-2 col-12">
+                <div class="get-quote">
+                  <a href="appointment.html" class="btn"> Appointment</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--/ End Header Inner -->
+    </header>
+    <!-- End Header Area -->
+
+    <!-- Slider Area -->
+    <section class="slider">
+      <div class="hero-slider">
+        <!-- Start Single Slider -->
+        <div
+          class="single-slider"
+          style="background-image: url('img/animation/1366x768-Campbell-Medical-Animation-Surgical-Teatments-of-Microtia.gif')"
+        >
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-7">
+                <div class="text">
+                  <h1 style="color: aliceblue;" >
+                    We Provide <span>Medical</span> Services That You Can
+                    <span>Trust!</span>
+                  </h1>
+                  <p  style="color: rgb(247, 73, 5);">
+                    Compassionate, reliable, and expert care tailored to your needs.
+          Our experienced medical team is here for you every step of the way.
+                  </p>
+                  <div class="button">
+                    <a href="appointment.html" class="btn">Get Appointment</a>
+                    <a href="about.html" class="btn primary">Learn More</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Single Slider -->
+        <!-- Start Single Slider -->
+        <div
+          class="single-slider"
+          style="background-image: url('img/animation/63eeeb75affb405cab3805d8_HealthFundraising_Blog_Thumbnail.gif')"
+        >
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-7">
+                <div class="text">
+                  <h1 style="color: rgb(243, 247, 242); ">
+                    We Provide <span>Medical</span> Services That You Can
+                    <span>Trust!</span>
+                  </h1>
+                  <p style="color: #eef1f5;">
+                    Compassionate, reliable, and expert care tailored to your individual needs. 
+  At Dr. VG Kidney Stone Clinic, we are committed to delivering the highest standards 
+  of urological and andrological treatment in a safe, supportive environment. 
+  Our experienced medical team takes a patient-first approach, ensuring comfort, 
+  clarity, and confidence at every step of your healthcare journey.
+                  </p>
+                  <div class="button">
+                    <a href="appointment.html" class="btn">Get Appointment</a>
+                    <a href="about.html" class="btn primary">About Us</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Start End Slider -->
+        <!-- Start Single Slider -->
+       
+        <!-- End Single Slider -->
+      </div>
+    </section>
+    <!--/ End Slider Area -->
+
+    <!-- Start Schedule Area -->
+    <section class="schedule">
+      <div class="container">
+        <div class="schedule-inner">
+          <div class="row">
+            <div class="col-lg-4 col-md-6 col-12">
+              <!-- single-schedule -->
+              <div class="single-schedule first"  style="background-image: url(bg\ red.jpg);">
+                <div class="inner">
+                  <div class="icon">
+                    <i class="fa fa-ambulance"></i>
+                  </div>
+   <div class="single-content" style="width:300px; height:200px; overflow:hidden; padding:20px; box-sizing:border-box;  ">
+
+    <span>Expert Medical Care</span>
+    <h4>Top Specialist</h4>
+    <p>
+        Dr. Vijay Ganapathy<br>
+        <strong>Consultant Urologist & Andrologist</strong>
+    </p>
+</div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12">
+              <!-- single-schedule -->
+              <div class="single-schedule middle">
+                <div class="inner">
+                  <div class="icon">
+                    <i class="icofont-prescription"></i>
+                  </div>
+                <div class="single-content" style="width:300px; height:200px; overflow:hidden; padding:20px; box-sizing:border-box;  ">
+    <span>Clinic Location</span>
+    <h4>Consultation Address</h4>
+    <p>
+        <strong>@Dr. VG Kidney Stone Clinic</strong>
+        #14B, First Cross Street,
+        Perumal Raja Garden,
+        Reddiyarapalayam
+         – 605010
+        <br>
+        <br>
+    </p>
+</div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-12 col-12">
+              <!-- single-schedule -->
+              <div class="single-schedule last" style="background-image: url(bg\ red.jpg);">
+                <div class="inner">
+                  <div class="icon">
+                    <i class="icofont-ui-clock"></i>
+                  </div>
+                                <div class="single-content" style="width:300px; height:200px;  padding:29px; box-sizing:border-box; margin-top: 0px; ">
+
+    <span>Contact & Clinic Time</span>
+    <p>
+     
+        Consultation Hours: 6:00 PM – 9:00 PM
+        <strong>Contact Numbers:</strong> 
+        <a href="tel:9444469179">9444469179</a>, 
+        <a href="tel:9444469194">9444469194</a>
+        (Monday to Friday)
+        Saturday & Sunday by Appointment Only
+    </p>
+</div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--/End Start schedule Area -->
+
+    <!-- Start Feautes -->
+
+  <section class="features section" style="padding: 50px 0; background-color: #f9f9f9; ">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="section-title" style="text-align: center; margin-bottom: 40px;">
+          <h2 style="font-size: 32px; font-weight: 700;">We Are Always Ready to Help You & Your Family</h2>
+          <img src="img/animation/animated---medical-ai-v3.gif" alt="Section Divider" style="margin: 20px 0;" />
+          <p style="max-width: 600px; margin: 0 auto; font-size: 16px; color: #666;">
+            Dedicated to providing timely, compassionate, and expert medical care to ensure the well-being of you and your loved ones.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row">
+      <!-- Feature 1 -->
+      <div class="col-lg-4 col-12">
+        <div class="single-features first" style="background:  #ac2626;margin-top: 20px; padding: 30px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.05); text-align: center;">
+          <div class="signle-icon" style="font-size: 36px; color: #19bb07; margin-bottom: 15px;">
+            <i class="icofont icofont-ambulance-cross"></i>
+          </div>
+          <h3 style="font-weight: 600; color: #09037cb5; padding: 10px;">Emergency Assistance</h3>
+          <p style="color: #faf5f5;">
+            Immediate medical help available when you need it most. Our emergency response is fast, reliable, and always on call.
+          </p>
+        </div>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="col-lg-4 col-12">
+        <div class="single-features" style="background: #ac2626; padding: 30px; border-radius: 8px; box-shadow: 0 0 10px rgba(235, 5, 5, 0.919); text-align: center;">
+          <div class="signle-icon" style="font-size: 36px; color: #19bb07; margin-bottom: 15px;">
+            <i class="icofont icofont-medical-sign-alt"></i>
+          </div>
+          <h3 style="font-weight: 600; color: #09037cb5; padding: 10px;">Fully Stocked Pharmacy</h3>
+          <p style="color: #faf5f5;">
+            Access a wide range of essential medicines and health supplies conveniently within our clinic premises.
+          </p>
+        </div>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="col-lg-4 col-12">
+        <div class="single-features last" style="background: #ac2626; padding: 30px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.05); text-align: center;">
+          <div class="signle-icon" style="font-size: 36px; color: #19bb07; margin-bottom: 15px;">
+            <i class="icofont icofont-stethoscope"></i>
+          </div>
+          <h3 style="font-weight: 600; color: #09037cb5; padding: 10px;">Comprehensive Treatment</h3>
+          <p style="color: #f7f4f4;">
+            Receive expert care across a range of specialties, tailored to your condition with compassion and precision.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Add this CSS style block directly inside the head or style section -->
+
+
+
+<script>
+  // Function to add the 'visible' class when the element is in view
+  window.addEventListener("scroll", function() {
+    const features = document.querySelectorAll('.single-features');
+    const windowHeight = window.innerHeight;
+
+    features.forEach(function(feature) {
+      const featureTop = feature.getBoundingClientRect().top;
+
+      // Check if the element is in the viewport
+      if (featureTop < windowHeight - 100) {
+        feature.classList.add('visible');
+      }
+    });
+  });
+</script>
+
+  <style>
+  /* Initial state of the feature items - invisible and shifted down */
+  .single-features {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+
+  /* When the item is visible, it fades in and slides up */
+  .single-features.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+<script>
+  // Function to add the 'visible' class when the element is in view
+  window.addEventListener("scroll", function() {
+    const features = document.querySelectorAll('.single-features');
+    const windowHeight = window.innerHeight;
+
+    features.forEach(function(feature) {
+      const featureTop = feature.getBoundingClientRect().top;
+
+      // Check if the element is in the viewport
+      if (featureTop < windowHeight - 100) {
+        feature.classList.add('visible');
+      }
+    });
+  });
+</script>
+
+</section>
+
+    <!--/ End Feautes -->
+
+    <!-- Start Fun-facts -->
+    <div id="fun-facts" class="fun-facts section overlay">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 col-12">
+            <!-- Start Single Fun -->
+            <div class="single-fun">
+              <i class="icofont icofont-home"></i>
+              <div class="content">
+                <span class="counter">20</span>
+                <p> Rooms</p>
+              </div>
+            </div>
+            <!-- End Single Fun -->
+          </div>
+          <!-- <div class="col-lg-3 col-md-6 col-12"> -->
+            <!-- Start Single Fun -->
+            <!-- <div class="single-fun">
+              <i class="icofont icofont-user-alt-3"></i>
+              <div class="content">
+                <span class="counter">337</span>
+                <p>Specialist Doctors</p>
+              </div>
+            </div> -->
+            <!-- End Single Fun -->
+          <!-- </div> -->
+          <div class="col-lg-3 col-md-6 col-12">
+            <!-- Start Single Fun -->
+            <div class="single-fun">
+              <i class="icofont-simple-smile"></i>
+              <div class="content">
+                <span class="counter">1379</span>
+                <p>Happy Patients</p>
+              </div>
+            </div>
+            <!-- End Single Fun -->
+          </div>
+          <div class="col-lg-3 col-md-6 col-12">
+            <!-- Start Single Fun -->
+            <div class="single-fun">
+              <i class="icofont icofont-table"></i>
+              <div class="content">
+                <span class="counter">32</span>
+                <p>Years of Experience</p>
+              </div>
+            </div>
+            <!-- End Single Fun -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/ End Fun-facts -->
+
+    <!-- Start Why choose --><div class="container">
+  <!-- Why Choose Us Section Title -->
+ 
+
+  <!-- Reasons to Choose Us -->
+
+
+    <section class="why-choose section" id="why-choose">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="section-title">
+        <h2>Why Choose Us?</h2>
+              <img src="inject.gif" alt="#" />
+              <p style="color: black;">
+          We are committed to providing the highest quality of healthcare through innovation, expertise, and personalized care.
+        </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 col-12">
+            <!-- Start Choose Left -->
+         <div class="choose-left">
+  <h3 style="color: palevioletred;">Welcome to Andrology World</h3>
+  <p  style="color: black;">
+    Dr. Vijay Ganapathy is a highly qualified and experienced urologist and andrologist. With his Gold Medals in various prestigious exams, he has been recognized globally for his expertise in urology, male infertility, kidney stones, and more.
+  </p>
+  <p  style="color: black;">
+    Dr. Vijay Ganapathy has pursued several international fellowships and has gained exceptional knowledge in his field. He is also a proud member of multiple professional societies.
+  </p>
+  <div class="row" style="color: rgb(133, 11, 11);">
+    <div class="col-lg-6"  style="color: rgb(133, 11, 11);">
+      <ul class="list"  style="color: rgb(133, 11, 11);" >
+        <li  style="color: rgb(133, 11, 11);"><i class="fa fa-caret-right"></i  style="color:green;">Gold Medalist in M.S (JIPMER)</li>
+        <li  style="color: rgb(133, 11, 11);"><i class="fa fa-caret-right"></i>Gold Medalist in M.Ch (Urology)</li>
+        <li  style="color: rgb(133, 11, 11);"><i class="fa fa-caret-right"></i>USI Fellowship in Endourology (SGH-Singapore)</li>
+        <li style="color: rgb(133, 11, 11);"><i class="fa fa-caret-right"></i>ICS Urogynaecologist (Florence, Italy)</li>
+      </ul>
+    </div>
+    <div class="col-lg-6">
+      <ul class="list">
+        <li style="color: rgb(133, 11, 11);"><i class="fa fa-caret-right"></i>Member of Urological Society of India</li>
+        <li style="color: rgb(133, 11, 11);"><i class="fa fa-caret-right"></i>Member of American Urological Association</li>
+        <li style="color: rgb(133, 11, 11);"><i class="fa fa-caret-right"></i>Member of Karnataka Urology Association</li>
+        <li style="color: rgb(133, 11, 11);"><i class="fa fa-caret-right"></i>Member of Pondicherry Renal Science Society</li>
+      </ul>
+    </div>
+  </div>
+<br>
+<center> <h4>Honors & Awards</h4> </center>
+ 
+  <br>
+  <ul class="list">
+    <li  style="color: rgb(133, 11, 11);"><i class="fa fa-caret-right"></i>Dr. S.C. Mitra Endowment prize (Gold medal) for highest score in MS Surgery examination (JIPMER, 2013)</li>
+    <li  style="color: rgb(133, 11, 11);"><i class="fa fa-caret-right"></i>Dr. S.B Sen Memorial Gold Medal for Best Post Graduate in Surgery</li>
+    <li style="color: rgb(133, 11, 11);"><i class="fa fa-caret-right"></i>DNB Gold Medal in General Surgery (Delhi-National Board of Examination)</li>
+    <li style="color: rgb(133, 11, 11);"><i class="fa fa-caret-right"></i>USI Olympus Traveling Fellowship (Urological Association of Asia, Singapore 2015)</li>
+    <li style="color: rgb(133, 11, 11);"><i class="fa fa-caret-right"></i>ICMR Sponsorship for ICS 2016 (Florence, Italy)</li>
+    <li style="color: rgb(133, 11, 11);"><i class="fa fa-caret-right"></i>Gold Medal in MCh Urology from RGUHS, Bangalore (Awarded by Vice President of India)</li>
+  </ul>
+</div>
+
+
+            <!-- End Choose Left -->
+          </div>
+          <div class="col-lg-6 col-12">
+            <!-- Start Choose Rights -->
+            <div class="choose-right">
+              <div class="video-image">
+             
+                <!-- Video Animation -->
+                <div class="promo-video">
+                  <div class="waves-block">
+                    <div class="waves wave-1"></div>
+                    <div class="waves wave-2"></div>
+                    <div class="waves wave-3"></div>
+                  </div>
+                </div>
+                <!--/ End Video Animation -->
+                <a
+                
+                  href="https://www.youtube.com/watch?v=g-jj4KrmYPI"
+                  class="video video-popup mfp-iframe"
+                  ><i class="fa fa-play"></i
+                ></a>
+              </div>
+            </div>
+            <!-- End Choose Rights -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--/ End Why choose -->
+         <section class="services section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="section-title">
+          <h2>We Offer Different Services To Improve Your Health</h2>
+          <img src="img/section-img.png" alt="Doctor's image" />
+          <p>
+            Dr. Vijay Ganapathy, a highly experienced and qualified doctor, offers a variety of services to improve your health. He is a gold medalist in M.S (JIPMER), D.N.B (Surgery), M.Ch (Urology), and has received fellowships in USI Endourology (SGH-Singapore) and ICS Urogynaecology (Florence, Italy).
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" style=>
+  <!-- Kidney Stone Service -->
+  <div class="col-lg-4 col-md-6 col-12" style="background-image: url(img/animation/7fpZ.gif);">
+    <div class="single-service hover-effect">
+            <h4 ><a  href="kidny.html" style="color: white;">Kidney Stone (சிறுநீரக கல்)</a></h4>
+            <a href="kidny.html">      <img src="kidny stone.gif" alt="Kidney Stone" class="service-img" />
+</a>
+
+      <p>
+        Dr. Ganapathy offers expert care for kidney stones, utilizing the latest techniques in urology to treat and manage kidney-related issues.
+      </p>
+    </div>
+  </div>
+  
+  <!-- Uro-Oncology Service -->
+  <div class="col-lg-4 col-md-6 col-12" style="background-image: url(img/animation/7fpZ.gif);">
+    <div class="single-service hover-effect">
+            <h4><a href="urage.html" style="color: white;" style="color: white; padding: 5px; ">Urogynaecology <br>(சிறுநீரக சிகிச்சை)</a></h4>
+<a href="urage.html">      <img src="Uro-Oncology.jpg" alt="Uro-Oncology" class="service-img" />
+</a>
+      <p>
+        Specialized treatment for urological cancers, with advanced methods to diagnose and treat urinary tract cancers effectively.
+      </p>
+    </div>
+  </div>
+  
+  <!-- Male Infertility Service -->
+  <div class="col-lg-4 col-md-6 col-12" style="background-image: url(img/animation/7fpZ.gif);">
+    <div class="single-service hover-effect">
+            <h4><a href="male .html" style="color: white;">Male Infertility (ஆண் கருவுறாமை)</a></h4>
+<a href="male .html">      <img src="male.gif" alt="Male Infertility" class="service-img" />
+</a>
+      <p>
+        Dr. Ganapathy offers comprehensive treatment for male infertility, including diagnosis and therapy tailored to individual needs.
+      </p>
+    </div>
+  </div>
+  
+  <!-- Prostate Problems Service -->
+  <div class="col-lg-4 col-md-6 col-12" style="background-image: url(img/animation/7fpZ.gif);">
+    <div class="single-service hover-effect">
+            <h4><a href="prostate.html" style="color: white;">Prostate Problems (புரோஸ்டேட் பிரச்சனை)</a></h4>
+<a href="prostate.html">      <img src="prostate.webp" alt="Prostate Problems" class="service-img" />
+</a>
+      <p>
+        Effective treatments for prostate issues, including both medical and surgical options for prostate enlargement and related concerns.
+      </p>
+    </div>
+  </div>
+  
+  <!-- Pediatric Urology Service -->
+  <div class="col-lg-4 col-md-6 col-12" style="background-image: url(img/animation/7fpZ.gif);">
+    <div class="single-service hover-effect">
+            <h4 style="color: #12f316;"><a href="pedia.html" style="color: white;">Pediatric Urology (குழந்தை சிறுநீரக சிகிச்சை)</a></h4>
+<a href="pedia.html">      <img src="pedia.png" alt="Pediatric Urology" class="service-img" />
+</a>
+      <p>
+        Specialized care for children's urological problems, offering safe and effective treatments for various pediatric urological conditions.
+      </p>
+    </div>
+  </div>
+  
+  <!-- Andrology Service -->
+  <div class="col-lg-4 col-md-6 col-12" style="background-image: url(img/animation/7fpZ.gif);">
+    <div class="single-service hover-effect">
+       <h4><a  href="ANDROLOGY.html" style="color: white;">Andrology (ஆண் உறுப்பு நோயியல்)</a></h4>
+       <a href="ANDROLOGY.html">      <img src="male pro.jpg" alt="Andrology" class="service-img" />
+</a>
+     
+      <p>
+        A specialized approach to male reproductive health, including the treatment of erectile dysfunction, low testosterone, and other andrological disorders.
+      </p>
+    </div>
+  </div>
+</div>
+
+  </div>
+</section>
+<style>
+  .services .single-service {
+    position: relative;
+   
+    overflow: hidden;
+box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;    color: wheat;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+  }
+
+  .services .single-service:hover {
+    transform: translateY(-10px);
+box-shadow: rgb(240, 2, 2) 3px 3px 6px 0px inset, rgb(249, 4, 4) -3px -3px 6px 1px inset;    color: wheat;
+  }
+  
+
+  .services .service-img {
+    width: 90%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    margin-right: 100px;
+  }
+
+  .services .single-service:hover .service-img {
+    transform: scale(1.1);
+    
+  }
+
+
+
+  .services .single-service:hover i {
+    color: #12f316;
+  }
+
+  .services h4 a {
+    font-size: 1.2rem;
+   
+    text-decoration: none;
+    transition: color 0.3s ease;
+    
+  }
+
+  .services .single-service:hover h4 a {
+    color: #eef1f5;
+  }
+
+.services .single-service h4{ 
+     color: #0c74fd;
+}
+  .services .single-service p {
+    font-size: 0.9rem;
+    color: #ffffff;
+    margin-top: 10px;
+  }
+
+  .services .section-title h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: rgb(244, 4, 4);
+  }
+
+  .services .section-title p {
+    font-size: 1rem;
+    color: #2903fc;
+  }
+
+  @media (max-width: 991px) {
+    .services .single-service {
+      margin-bottom: 20px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .services .single-service {
+      text-align: center;
+    }
+  }
+</style>
+
+    <!-- Start Call to action -->
+    <section class="call-action overlay" data-stellar-background-ratio="0.5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-12">
+        <div class="content">
+  <h2>Need Emergency Medical Care? Call Now: <span class="highlight">9444469179</span></h2>
+  <p>
+    In case of an emergency, don't wait. Get in touch with us immediately to ensure fast and efficient medical assistance. Your health is our priority.
+  </p>
+  <div class="buttons">
+    <a href="#" class="btn primary">Contact Us Now</a>
+    <a href="#" class="btn secondary">Learn More <i class="fa fa-long-arrow-right"></i></a>
+  </div>
+</div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--/ End Call to action -->
+
+    <!-- Start portfolio -->
+    <!-- <section class="portfolio section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="section-title">
+              <h2>We Maintain Cleanliness Rules Inside Our Hospital</h2>
+              <img src="" alt="#" />
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipiscing elit praesent
+                aliquet. pretiumts
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-12 col-12">
+            <div class="owl-carousel portfolio-slider">
+              <div class="single-pf">
+                <img src="img/pf1.jpg" alt="#" />
+                <a href="portfolio-details.html" class="btn">View Details</a>
+              </div>
+              <div class="single-pf">
+                <img src="img/pf2.jpg" alt="#" />
+                <a href="portfolio-details.html" class="btn">View Details</a>
+              </div>
+              <div class="single-pf">
+                <img src="img/pf3.jpg" alt="#" />
+                <a href="portfolio-details.html" class="btn">View Details</a>
+              </div>
+              <div class="single-pf">
+                <img src="img/pf4.jpg" alt="#" />
+                <a href="portfolio-details.html" class="btn">View Details</a>
+              </div>
+              <div class="single-pf">
+                <img src="img/pf1.jpg" alt="#" />
+                <a href="portfolio-details.html" class="btn">View Details</a>
+              </div>
+              <div class="single-pf">
+                <img src="img/pf2.jpg" alt="#" />
+                <a href="portfolio-details.html" class="btn">View Details</a>
+              </div>
+              <div class="single-pf">
+                <img src="img/pf3.jpg" alt="#" />
+                <a href="portfolio-details.html" class="btn">View Details</a>
+              </div>
+              <div class="single-pf">
+                <img src="img/pf4.jpg" alt="#" />
+                <a href="portfolio-details.html" class="btn">View Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+    <!--/ End portfolio -->
+
+    <!-- Start service -->
+
+
+    <!--/ End service -->
+<br>
+    <!-- Start Testimonials -->
+    <section
+      class="section testimonials overlay"
+      data-stellar-background-ratio="0.5"
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="section-title">
+              <h2>What Our Patients Say About Our Medical Treatments</h2>
+              <img src="img/section-img2.png" alt="#" />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12 col-12">
+            <div class="owl-carousel testimonial-slider">
+              <!-- Start Single Testimonial -->
+              <div class="single-testimonial" style= "height: 200px;">
+                <img src="profile1.jpg" alt="#" />
+<p>“Dr. Vijay Ganapathy’s treatment for male infertility was a game-changer. I’m now a proud father thanks to his expertise.”</p>
+            <h4 class="name"> kishor</h4>   </div>
+              <!-- End Single Testimonial -->
+              <!-- Start Single Testimonial -->
+              <div class="single-testimonial" style= "height: 200px;">
+                <img src="profile2.png" alt="#" />
+<p>“I struggled with erectile dysfunction, but Dr. Vijay Ganapathy provided effective treatment. I’m feeling much better now.”</p>            
+             <h4 class="name"> Rahman</h4>   </div>
+              <!-- End Single Testimonial -->
+              <!-- Start Single Testimonial -->
+              <div class="single-testimonial" style= "height: 200px;">
+                <img src="profile3.jpg" alt="#" />
+<p>“Dr. Vijay Ganapathy treated my kidney stones with great care. His experience made all the difference in my recovery.”</p>
+                <h4 class="name">Arun</h4>
+              </div>
+              <!-- End Single Testimonial -->
+              <!-- Start Single Testimonial -->
+              <div class="single-testimonial" style= "height: 200px;">
+                <img src="profile1.jpg" alt="#" />
+<p>“Dr. Vijay Ganapathy’s approach to male fertility was thorough and effective. I’m very grateful for his care.”</p>              
+               <h4 class="name">kanthasamy</h4> </div>
+              <!-- End Single Testimonial -->
+              <!-- Start Single Testimonial -->
+              <div class="single-testimonial" style= "height: 200px;">
+                <img src="profile2.png" alt="#" />
+<p>“I was suffering from a urinary tract issue, and Dr. Vijay Ganapathy’s treatment was exactly what I needed. Highly recommend.”</p>
+                <h4 class="name">kumaran</h4>
+              </div>
+              <!-- End Single Testimonial -->
+              <!-- Start Single Testimonial -->
+              <div class="single-testimonial" style= "height: 200px;">
+                <img src="profile3.jpg" alt="#" />
+<p>“After seeing Dr. Vijay Ganapathy for kidney stones, I felt immediate relief. His expertise made the whole process easier.”</p>              
+              <h4 class="name">karthikeyan</h4>  </div>
+              <!-- End Single Testimonial -->
+              <!-- Start Single Testimonial -->
+              <div class="single-testimonial" style= "height: 200px;">
+                <img src="profile1.jpg" alt="#" />
+<p>“Dr. Vijay Ganapathy’s male fertility treatment was exceptional. I’m finally seeing the results I’ve hoped for.”</p>              
+               <h4 class="name">Ram kumar</h4> </div>
+              <!-- End Single Testimonial -->
+              <!-- Start Single Testimonial -->
+              <div class="single-testimonial" style= "height: 200px;">
+                <img src="profile2.png" alt="#" />
+<p>“Dr. Vijay Ganapathy’s care for my kidney stones was outstanding. He helped me recover quickly with his expert treatment.”</p>
+                <h4 class="name">kabilan</h4>
+              </div>
+              <!-- End Single Testimonial -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--/ End Testimonials -->
+
+    <!-- Start Departments -->
+    <section class="departments section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="section-title">
+              <h2>We Offer Different Departments To Diagnose Your Diseases</h2>
+              <img src="img/section-img.png" alt="#" />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="department-tab tab-menu">
+              <!-- Tab Menu -->
+              <div class="list-group nav nav-tabs" id="list-tab" role="tablist">
+                <a
+                  class="list-group-item nav-item active"
+                  data-bs-toggle="list"
+                  href="#tab1"
+                  role="tab"
+                >
+                <i class="icofont-stethoscope-alt"></i>
+                  ><span class="first">kidney stone</span
+                  ><span class="second">click</span>
+                </a>
+                <a
+                  class="list-group-item"
+                  data-bs-toggle="list"
+                  href="#tab2"
+                  role="tab"
+                >
+                 <i class="icofont-stethoscope-alt"></i>
+                  ><span class="first">male infertility</span
+                  ><span class="second">click</span>
+                </a>
+
+                <a
+                  class="list-group-item"
+                  data-bs-toggle="list"
+                  href="#tab3"
+                  role="tab"
+                >
+               <i class="icofont-stethoscope-alt"></i>
+                 
+                  ><span class="first">Andrology</span
+                  ><span class="second">click</span>
+                </a>
+
+                <a
+                  class="list-group-item"
+                  data-bs-toggle="list"
+                  href="#tab4"
+                  role="tab"
+                >
+                 <i class="icofont-stethoscope-alt"></i>
+                  ><span class="first">Prostate</span
+                  ><span class="second">click</span>
+                </a>
+
+                <a
+                  class="list-group-item"
+                  data-bs-toggle="list"
+                  href="#tab5"
+                  role="tab"
+                >
+                 <i class="icofont-stethoscope-alt"></i>
+                  ><span class="first">Paediatric Urology</span
+                  ><span class="second">click</span>
+                </a>
+              </div>
+              <!-- Tab Details -->
+              <div class="tab-details">
+                <div class="tab-content" id="nav-tabContent">
+                  <!-- Tab One -->
+                  <div
+                    class="tab-pane fade show active"
+                    id="tab1"
+                    role="tabpanel"
+                  >
+                    <div class="row">
+<div class="col-lg-6">
+    <div class="department-left">
+         <h3>Advanced Urology Treatments</h3>
+        <p>
+            Our advanced endo urology suite is equipped with state-of-the-art tools, including flexible and semi-rigid ureteroscopes, a pediatric scope, and a miniature nephroscope, making kidney stone surgeries hassle-free. We offer a range of procedures:
+        </p>
+        <ul>
+            <li><strong>ESWL – Extra Shock Wave Lithotripsy</strong>: A non-invasive treatment where strong electromagnetic waves break kidney stones up to 1 cm in size.</li>
+            <li><strong>PCNL – Percutaneous Nephrolithotomy</strong>: A small incision (<1 cm) is made to remove larger stones (2-5 cm) using a nephroscope and laser.</li>
+            <li><strong>Minperc and Ultra Mini Perc</strong>: A minimally invasive procedure with a 5 mm tract size, using a thinner nephroscope for stone removal.</li>
+            <li><strong>RIRS – Retrograde Intra Renal Surgery</strong>: A no-incision procedure that uses a flexible ureteroscope to break stones in difficult-to-reach kidney areas with a laser.</li>
+            <li><strong>URSL – Ureteroscopic Stone Removal</strong>: Stones stuck in the ureter are broken with a laser and removed with a basket, relieving pain and discomfort.</li>
+        </ul>
+
+     
+    </div>
+</div>
+
+
+                      <div class="col-lg-6">
+                        <div class="department-right">
+                          <img src="kidny stone.gif" alt="#" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Tab Two -->
+                  <div class="tab-pane fade" id="tab2" role="tabpanel">
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div class="department-left">
+                          <h3>Male Infertility</h3>
+        <p>
+            Male infertility is a common cause of childlessness, affecting up to one-third or half of all infertility cases. It can result from low sperm production, abnormal sperm function, or blockages preventing sperm delivery. Symptoms may include difficulty with ejaculation, erectile dysfunction, pain or swelling in the testicle area, or hormonal imbalances. In many cases, male infertility can be treated with sperm retrieval techniques (PESA, MESA, TESA, TESE), surgery (e.g., varicocelectomy, vasectomy reversal), medications for sexual dysfunction, hormone treatments, or assisted reproductive technologies like IVF or ICSI.
+        </p>
+                       
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="department-right">
+                          <img src="male pro.jpg" alt="#" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Tab Three -->
+                  <div class="tab-pane fade" id="tab3" role="tabpanel">
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div class="department-left">
+                             <h3>Andrology Treatments</h3>
+        <p>
+            Welcome to our Andrology Clinic, where we specialize in male sexual health, reproductive, and uro-genital issues. Our experienced team offers a range of treatments for conditions like erectile dysfunction, premature ejaculation, Peyronie’s disease, low libido, and more. We provide discreet, comfortable consultations and offer natural, medically approved male enhancement treatments such as extension devices, rehabilitation programs, supplements, and advice. Our services also include hormonal analysis, penile Doppler, PDE 5 inhibitor therapy, intracavernosal injection therapy, penile prosthesis, testosterone replacement therapy, and much more. Whether you're dealing with performance anxiety or physical issues like penile curvature or scrotal pain, we’re here to help with professional care and support.
+        </p>
+                          
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="department-right">
+                          <img src="andrology-treatment-banner.webp" alt="#" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Tab Four -->
+                  <div class="tab-pane fade" id="tab4" role="tabpanel">
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div class="department-left">
+                             <h3>Prostate Treatment</h3>
+        <p>
+            The prostate gland, unique to males, helps produce semen and is located below the bladder, surrounding the urethra. Common treatments for prostate issues include Transurethral Resection of the Prostate (TURP), a minimally invasive surgery where the prostate tissue blocking the urethra is removed through the penis using a resectoscope. Other treatments include HOLEP (Holmium Laser Enucleation of the Prostate), where a laser removes excess tissue, and Transurethral Laser Resection or Vaporization, which uses a cystoscope and laser to burn away prostate tissue. Another option is Prostatic Urethral Lift (PUL), where implants are placed to push the enlarged prostate away from the urethra, relieving symptoms like difficulty urinating.
+        </p>
+                      
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="department-right">
+                          <img src="prostate.webp" alt="#" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Tab Five -->
+                  <div class="tab-pane fade" id="tab5" role="tabpanel">
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div class="department-left">
+                         <h3>Pediatric Urology</h3>
+        <p>
+            Pediatric urology is a specialized field that focuses on the treatment of disorders affecting the genitourinary systems of children, from birth to early adulthood. Common issues treated include bladder control problems like bedwetting and daytime urinary incontinence, undescended testes (cryptorchidism), hypospadias, epispadias, urolithiasis (bladder and kidney stones), phimosis, urinary obstruction, neurogenic bladder, and antenatal hydronephrosis. We also manage genitourinary trauma, malformations, and cancers of the kidneys. Our team is skilled in addressing a wide range of birth defects and other urological conditions in children.
+        </p>
+                        
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="department-right">
+                          <img src="kids.png" alt="#" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- End Tab Details -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Departments -->
+
+    <!-- Pricing Table -->
+    <!-- <section class="pricing-table section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="section-title">
+              <h2>We Provide You The Best Treatment In Resonable Price</h2>
+              <img src="img/section-img.png" alt="#" />
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipiscing elit praesent
+                aliquet. pretiumts
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row"> -->
+          <!-- Single Table -->
+          <!-- <div class="col-lg-4 col-md-12 col-12">
+            <div class="single-table"> -->
+              <!-- Table Head -->
+              <!-- <div class="table-head">
+                <div class="icon">
+                  <i class="icofont icofont-ui-cut"></i>
+                </div>
+                <h4 class="title">Plastic Suggery</h4>
+                <div class="price">
+                  <p class="amount">$199<span>/ Per Visit</span></p>
+                </div>
+              </div> -->
+              <!-- Table List -->
+              <!-- <ul class="table-list">
+                <li>
+                  <i class="icofont icofont-ui-check"></i>Lorem ipsum dolor sit
+                </li>
+                <li>
+                  <i class="icofont icofont-ui-check"></i>Cubitur sollicitudin
+                  fentum
+                </li>
+                <li class="cross">
+                  <i class="icofont icofont-ui-close"></i>Nullam interdum enim
+                </li>
+                <li class="cross">
+                  <i class="icofont icofont-ui-close"></i>Donec ultricies metus
+                </li>
+                <li class="cross">
+                  <i class="icofont icofont-ui-close"></i>Pellentesque eget nibh
+                </li>
+              </ul> -->
+              <!-- <div class="table-bottom">
+                <a class="btn" href="#">Book Now</a>
+              </div> -->
+              <!-- Table Bottom -->
+            <!-- </div>
+          </div> -->
+          <!-- End Single Table-->
+          <!-- Single Table -->
+          <!-- <div class="col-lg-4 col-md-12 col-12">
+            <div class="single-table"> -->
+              <!-- Table Head -->
+              <!-- <div class="table-head">
+                <div class="icon">
+                  <i class="icofont icofont-tooth"></i>
+                </div>
+                <h4 class="title">Teeth Whitening</h4>
+                <div class="price">
+                  <p class="amount">$299<span>/ Per Visit</span></p>
+                </div>
+              </div> -->
+              <!-- Table List -->
+              <!-- <ul class="table-list">
+                <li>
+                  <i class="icofont icofont-ui-check"></i>Lorem ipsum dolor sit
+                </li>
+                <li>
+                  <i class="icofont icofont-ui-check"></i>Cubitur sollicitudin
+                  fentum
+                </li>
+                <li>
+                  <i class="icofont icofont-ui-check"></i>Nullam interdum enim
+                </li>
+                <li class="cross">
+                  <i class="icofont icofont-ui-close"></i>Donec ultricies metus
+                </li>
+                <li class="cross">
+                  <i class="icofont icofont-ui-close"></i>Pellentesque eget nibh
+                </li>
+              </ul> -->
+              <!-- <div class="table-bottom">
+                <a class="btn" href="#">Book Now</a>
+              </div> -->
+              <!-- Table Bottom -->
+            <!-- </div>
+          </div> -->
+          <!-- End Single Table-->
+          <!-- Single Table -->
+          <!-- <div class="col-lg-4 col-md-12 col-12">
+            <div class="single-table"> -->
+              <!-- Table Head -->
+              <!-- <div class="table-head">
+                <div class="icon">
+                  <i class="icofont-heart-beat"></i>
+                </div> -->
+                <!-- <h4 class="title">Heart Suggery</h4>
+                <div class="price">
+                  <p class="amount">$399<span>/ Per Visit</span></p>
+                </div>
+              </div> -->
+              <!-- Table List -->
+              <!-- <ul class="table-list">
+                <li>
+                  <i class="icofont icofont-ui-check"></i>Lorem ipsum dolor sit
+                </li>
+                <li>
+                  <i class="icofont icofont-ui-check"></i>Cubitur sollicitudin
+                  fentum
+                </li>
+                <li>
+                  <i class="icofont icofont-ui-check"></i>Nullam interdum enim
+                </li>
+                <li>
+                  <i class="icofont icofont-ui-check"></i>Donec ultricies metus
+                </li>
+                <li>
+                  <i class="icofont icofont-ui-check"></i>Pellentesque eget nibh
+                </li>
+              </ul>
+              <div class="table-bottom">
+                <a class="btn" href="#">Book Now</a>
+              </div> -->
+              <!-- Table Bottom -->
+            <!-- </div>
+          </div> -->
+          <!-- End Single Table-->
+        <!-- </div>
+      </div>
+    </section> -->
+    <!--/ End Pricing Table -->
+
+    <!-- Start Team -->
+    <section
+      id="team"
+      class="team section overlay"
+      data-stellar-background-ratio="0.5"
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="section-title">
+              <h2>We Have Specialist Doctor To Solve Your Problems</h2>
+              <img src="img/section-img2.png" alt="#" />
+            <p>
+  Dr. Vijay Ganapathy is a highly experienced and qualified medical professional, offering a wide range of specialized services to enhance your health and well-being. A gold medalist in M.S. (JIPMER), he also holds advanced qualifications in D.N.B. (Surgery) and M.Ch. (Urology). Dr. Ganapathy has further honed his expertise through prestigious fellowships in USI Endourology (SGH-Singapore) and ICS Urogynaecology (Florence, Italy).
+</p>
+
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-3 col-md-6 col-12" data-tilt>
+            <!-- Single Team -->
+            <div class="single-team">
+              <div class="t-head">
+                <img src="vijay dr.jpg" alt="#" />
+                <div class="t-icon">
+                  <a href="appointment.html" class="btn">Get Appointment</a>
+                </div>
+              </div>
+              <div class="t-bottom">
+              
+                <h2><a href="doctor-details.html">more</a></h2>
+              </div>
+            </div>
+            <!-- End Single Team -->
+          </div>
+          <div class="col-lg-3 col-md-6 col-12" data-tilt>
+            <!-- Single Team -->
+            <div class="single-team">
+              <!-- Team Head -->
+              <div class="t-head">
+                <img style="width: 100%;height: 350px;" src="IMG_20180412_105350.jpg" alt="#" />
+                <div class="t-icon">
+                  <a href="appointment.html" class="btn">Get Appointment</a>
+                </div>
+              </div>
+              <!-- Team Bottom -->
+              <div class="t-bottom">
+             
+                <h2><a href="doctor-details.html">more</a></h2>
+              </div>
+              <!--/ End Team Bottom -->
+            </div>
+            <!-- End Single Team -->
+          </div>
+          <div class="col-lg-3 col-md-6 col-12" data-tilt>
+            <!-- Single Team -->
+            <div class="single-team">
+              <!-- Team Head -->
+              <div class="t-head">
+                <img  style="width: 100%;height: 350px;"src="IMG_2110.JPG" alt="#" />
+                <div class="t-icon">
+                  <a href="appointment.html" class="btn">Get Appointment</a>
+                </div>
+              </div>
+              <!-- Team Bottom -->
+              <div class="t-bottom">
+             
+                <h2><a href="doctor-details.html">more</a></h2>
+              </div>
+              <!--/ End Team Bottom -->
+            </div>
+            <!-- End Single Team -->
+          </div>
+          <div class="col-lg-3 col-md-6 col-12" data-tilt>
+            <!-- Single Team -->
+            <div class="single-team">
+              <!-- Team Head -->
+              <div class="t-head">
+                <img  style="width: 100%;height: 350px;"src="FB_IMG_1518371109675.jpg" alt="#" />
+                <div class="t-icon">
+                  <a href="appointment.html" class="btn">Get Appointment</a>
+                </div>
+              </div>
+              <!-- Team Bottom -->
+              <div class="t-bottom">
+                <h2><a href="doctor-details.html">more</a></h2>
+              </div>
+              <!--/ End Team Bottom -->
+            </div>
+            <!-- End Single Team -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--/ End Team -->
+
+    <!-- Start Blog Area -->
+    <!-- <section class="blog section" id="blog">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="section-title">
+              <h2>Keep up with Our Most Recent Medical News.</h2>
+              <img src="img/section-img.png" alt="#" />
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipiscing elit praesent
+                aliquet. pretiumts
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-6 col-12">
+            <!-- Single Blog -->
+            <!-- <div class="single-news">
+              <div class="news-head">
+                <img src="img/blog1.jpg" alt="#" />
+              </div>
+              <div class="news-body">
+                <div class="news-content">
+                  <div class="date">22 Aug, 2020</div>
+                  <h2>
+                    <a href="blog-grid.html"
+                      >We have annnocuced our new product.</a
+                    >
+                  </h2>
+                  <p class="text">
+                    Lorem ipsum dolor a sit ameti, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt sed do incididunt sed.
+                  </p>
+                </div>
+              </div>
+            </div> -->
+          <!-- </div>
+          <div class="col-lg-4 col-md-6 col-12">
+            <div class="single-news">
+              <div class="news-head">
+                <img src="img/blog2.jpg" alt="#" />
+              </div>
+              <div class="news-body">
+                <div class="news-content">
+                  <div class="date">15 Jul, 2020</div>
+                  <h2>
+                    <a href="blog-grid.html"
+                      >Top five way for solving teeth problems.</a
+                    >
+                  </h2>
+                  <p class="text">
+                    Lorem ipsum dolor a sit ameti, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt sed do incididunt sed.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-12">
+            <div class="single-news">
+              <div class="news-head">
+                <img src="img/blog3.jpg" alt="#" />
+              </div>
+              <div class="news-body">
+                <div class="news-content">
+                  <div class="date">05 Jan, 2020</div>
+                  <h2>
+                    <a href="blog-grid.html"
+                      >We provide highly business soliutions.</a
+                    >
+                  </h2>
+                  <p class="text">
+                    Lorem ipsum dolor a sit ameti, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt sed do incididunt sed.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>  -->
+
+    <!-- Start clients -->
+    <!-- <div class="clients overlay">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-12">
+            <div class="owl-carousel clients-slider">
+              <div class="single-clients" style="width: 200px;height: 200px;">
+                <img src="img/client1.png" alt="#" />
+              </div>
+              <div class="single-clients">
+                <img src="img/client2.png" alt="#" />
+              </div>
+              <div class="single-clients">
+                <img src="img/client3.png" alt="#" />
+              </div>
+              <div class="single-clients">
+                <img src="img/client4.png" alt="#" />
+              </div>
+              <div class="single-clients">
+                <img src="jipmer gold medal -mitra.jpg" alt="#" />
+              </div>
+              <div class="single-clients">
+                <img src="jipmer gold medal.JPG" alt="#" />
+              </div>
+              <div class="single-clients">
+                <img src="jipmer medal alumini.jpg" alt="#" />
+              </div>
+              <div class="single-clients">
+                <img src="ISEMT - 2014.jpg" alt="#" />
+              </div>
+              <div class="single-clients">
+                <img src="img/client4.png" alt="#" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <!--/Ens clients -->
+
+    <!-- Start Appointment -->
+    <section class="appointment">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="section-title">
+              <h2>We Are Always Ready to Help You. Book An Appointment</h2>
+              <img src="img/section-img.png" alt="#" />
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipiscing elit praesent
+                aliquet. pretiumts
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 col-md-12 col-12">
+            <form class="form" action="#">
+              <div class="row">
+                <div class="col-lg-6 col-md-6 col-12">
+                  <div class="form-group">
+                    <input name="name" type="text" placeholder="Full Name" />
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-12">
+                  <div class="form-group">
+                    <input name="email" type="email" placeholder="Email Adress" />
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-12">
+                  <div class="form-group">
+                    <input name="phone" type="text" placeholder="Phone Number" />
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-12">
+                  <div class="form-group">
+                    <div class="nice-select form-control wide" tabindex="0">
+                      <span class="current">Department</span>
+                      <ul class="list">
+                        <li data-value="1" class="option selected">
+                          Department
+                        </li>
+                     <li data-value="2" class="option">Urologist</li>
+                        <li data-value="3" class="option">Andrologist</li>
+                       
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-12">
+                  <div class="form-group">
+                    <div class="nice-select form-control wide" tabindex="0">
+                      <span class="current">Doctor</span>
+                      <ul class="list">
+                        <li data-value="1" class="option selected">Doctor</li>
+                        <li data-value="2" class="option">
+                          Dr. Vijay Ganapathy
+                        </li>
+                       
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-12">
+                  <div class="form-group">
+                    <input type="text" placeholder="Date" id="datepicker" />
+                  </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-12">
+                  <div class="form-group">
+                    <textarea
+                      name="message"
+                      placeholder="Write Your Message Here....."
+                    ></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-5 col-md-4 col-12">
+                  <div class="form-group">
+                    <div class="button">
+                      <button type="submit" class="btn">
+                        Book An Appointment
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-7 col-md-8 col-12">
+                  <p>( We will be confirm by an Text Message )</p>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="col-lg-6 col-md-12">
+            <div class="appointment-image">
+              <img src="img/animation/medical_building_800x600.gif" alt="#" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Appointment -->
+
+    <!-- Start Newsletter Area -->
+    
+    <!-- /End Newsletter Area -->
+
+     <!-- Footer Area -->
+    
+    <!--/ End Footer Area -->  <footer id="footer" class="footer">
+      <!-- Footer Top -->
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-6 col-12">
+              <div class="single-footer">
+                <h2>About Us</h2>
+                <p>
+                 About Dr. Vijay Ganapathy:
+Urologist & Andrologist specializing in scarless kidney surgeries and men’s health.
+Trained internationally with gold-medal honors and global research credentials.
+                </p>
+                <!-- Social -->
+                <ul class="social">
+                  <li>
+                    <a href="https://www.facebook.com/DrVGUrologist/"><i class="icofont-facebook"></i></a>
+                  </li>
+                  <li>
+                    <a href="https://www.instagram.com/dr.vgkidneystoneclinic/"><i class="icofont-instagram"></i></a>
+                  </li>
+                  <li>
+                    <a href="https://www.facebook.com/DrVGUrologist/"><i class="icofont-twitter"></i></a>
+                  </li>
+                  
+                  <li>
+                    <a href="http://www.youtube.com/@dr.vgkidneystoneclinicpond235"><i class="icofont-youtube"></i></a>
+                  </li>
+                </ul>
+                <!-- End Social -->
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-12">
+              <div class="single-footer f-link">
+                <h2>Quick Links</h2>
+                <div class="row">
+                  <div class="col-lg-6 col-md-6 col-12">
+                    <ul>
+                      <li>
+                        <a href="index.html"
+                          ><i class="fa fa-caret-right" aria-hidden="true"></i
+                          >Home</a
+                        >
+                      </li>
+                      <li>
+                        <a href="about.html"
+                          ><i class="fa fa-caret-right" aria-hidden="true"></i
+                          >About Us</a
+                        >
+                      </li>
+                      <li>
+                        <a href="service.html"
+                          ><i class="fa fa-caret-right" aria-hidden="true"></i
+                          >Services</a
+                        >
+                      </li>
+                      <!-- <li>
+                        <a href="#"
+                          ><i class="fa fa-caret-right" aria-hidden="true"></i
+                          >Our Cases</a
+                        >
+                      </li> -->
+                      <li>
+                        <a href="http://www.youtube.com/@dr.vgkidneystoneclinicpond235"
+                          ><i class="fa fa-caret-right" aria-hidden="true"></i
+                          >Other Links</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-12">
+                    <ul>
+                      <li>
+                        <a href="appointment.html"
+                          ><i class="fa fa-caret-right" aria-hidden="true"></i
+                          > consulting</a
+                        >
+                      </li>
+                      <li>
+                        <a href="about.html"
+                          ><i class="fa fa-caret-right" aria-hidden="true"></i
+                          >clinic</a
+                        >
+                      </li>
+                     
+                      <!-- <li>
+                        <a href="#"
+                          ><i class="fa fa-caret-right" aria-hidden="true"></i
+                          >FAQ</a
+                        >
+                      </li> -->
+                      <li>
+                        <a href="contact.html"
+                          ><i class="fa fa-caret-right" aria-hidden="true"></i
+                          >Contact Us</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-12">
+              <div class="single-footer">
+                <h2>Open Hours</h2>
+                <p>
+                  Our clinic is open to serve you during the following hours.
+                </p>
+                <ul class="time-sidual">
+                  <li class="day">Monday - Friday <span>6pm-9pm</span></li>
+                  <li class="day">Saturday-sunday<span>appointment only</span></li>
+                
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-12">
+              <div class="single-footer">
+               <h2>Newsletter</h2>
+<p>
+  Subscribe to our newsletter to receive the latest clinic news, health tips, and updates directly in your inbox.
+</p>
+
+                <!-- <form
+                  action="ganapu86@gmail.com"
+                  method="get"
+                  class="newsletter-inner"
+                >
+                  <input
+                    name="email"
+                    placeholder="Email Address"
+                    class="common-input"
+                    onfocus="this.placeholder = ''"
+                    onblur="this.placeholder = 'Your email address'"
+                    required=""
+                    type="email"
+                  />
+                  <button class="button">
+                    <i class="icofont icofont-paper-plane"></i>
+                  </button>
+                </form> -->
+            <form id="newsletter-form" class="newsletter-inner">
+  <input name="user_email" type="email" placeholder="Your email address" required class="common-input" />
+  <button type="submit" class="button"><i class="icofont icofont-paper-plane"></i></button>
+</form>
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("srgTZHet4xIuVbBkV");
+  })();
+</script>
+
+<script>
+document.getElementById('newsletter-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  emailjs.sendForm('service_s8sxhpp', 'template_lofsjcf', this)
+    .then(() => {
+      alert('Newsletter subscription sent!');
+    }, (error) => {
+      alert('Failed to send. Please try again.');
+    });
+});
+</script>
+  </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--/ End Footer Top -->
+      <!-- Copyright -->
+      <div class="copyright">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-12">
+              <div class="copyright-content">
+               <p>
+                  © Copyright <script type="text/javascript">var year = new Date(); document.write(year.getFullYear());</script> by <a href="#"> | All Rights Reserved 
+                  <a href="index.html">vg</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--/ End Copyright -->
+    </footer>
+<script>
+  let lastScrollTop = 0;
+  const header = document.querySelector("header.header");
+
+  window.addEventListener("scroll", function () {
+    let st = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (window.innerWidth <= 767) { // Mobile only
+      if (st > lastScrollTop) {
+        // Scrolling down
+        header.classList.add("hide-header");
+      } else {
+        // Scrolling up
+        header.classList.remove("hide-header");
+      }
+    } else {
+      header.classList.remove("hide-header"); // Always show on desktop
+    }
+
+    lastScrollTop = st <= 0 ? 0 : st; // Prevent negative
+  }, false);
+</script>
+
+    <!-- jquery Min JS -->
+    <script src="js/jquery.min.js"></script>
+    <!-- jquery Migrate JS -->
+    <script src="js/jquery-migrate.js"></script>
+    <!-- Easing JS -->
+    <script src="js/easing.js"></script>
+    <!-- Color JS -->
+    <script src="js/colors.js"></script>
+    <!-- Popper JS -->
+    <script src="js/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Bootstrap Datepicker JS -->
+    <script src="js/bootstrap-datepicker.js"></script>
+    <!-- Jquery Nav JS -->
+    <script src="js/jquery.nav.js"></script>
+    <!-- Slicknav JS -->
+    <script src="js/slicknav.min.js"></script>
+    <!-- ScrollUp JS -->
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <!-- Niceselect JS -->
+    <script src="js/niceselect.js"></script>
+    <!-- Tilt Jquery JS -->
+    <script src="js/tilt.jquery.min.js"></script>
+    <!-- Owl Carousel JS -->
+    <script src="js/owl-carousel.js"></script>
+    <!-- counterup JS -->
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <!-- Steller JS -->
+    <script src="js/steller.js"></script>
+    <!-- Wow JS -->
+    <script src="js/wow.min.js"></script>
+    <!-- Magnific Popup JS -->
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <!-- Main JS -->
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<head>
+  <style>
+  /* General Styling */
+  .doctor-details-item {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+
+  /* Hover Effect for Doctor Item */
+  .doctor-details-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(241, 10, 10, 0.926);
+  }
+
+  /* Styling the Doctor Name */
+  .doctor-name h3.name {
+    font-size: 30px;
+    color: #ed0d0d;
+    transition: color 0.3s ease;
+  }
+
+  .doctor-name p.deg {
+    font-size: 18px;
+    color: #c80707;
+    font-weight: 500;
+  }
+
+  .doctor-name p.degree {
+    font-size: 16px;
+    color: #110101;
+    font-style: italic;
+  }
+
+  /* Hover Effect on Doctor Name */
+  .doctor-name h3.name:hover {
+    color: #007bff;
+    cursor: pointer;
+  }
+
+  /* Biography Section */
+  .doctor-details-biography {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-left: 5px solid #007bff;
+    background-color: #fff;
+    color: #000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+
+  /* Hover Effect on Biography */
+  .doctor-details-biography:hover {
+    transform: translateX(10px);
+    background-color: #f1f4f6;
+    cursor: pointer;
+  }
+
+  .doctor-details-biography h3 {
+    color: #007bff;
+    font-size: 24px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+
+  /* List Items Styling (Education and Experience) */
+  ul {
+    padding-left: 20px;
+    line-height: 1.8;
+  }
+
+  ul li {
+    font-size: 16px;
+    color: #f61212;
+    transition: color 0.3s ease;
+  }
+
+  ul li:hover {
+    color: #007bff;
+    cursor: pointer;
+  }
+
+  /* Subtle Animations for Each Section */
+  .doctor-details-item {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* Media Queries for Responsiveness */
+  @media (max-width: 767px) {
+    .doctor-name h3.name {
+      font-size: 26px;
+    }
+
+    .doctor-name p.deg,
+    .doctor-name p.degree {
+      font-size: 14px;
+    }
+
+    .doctor-details-item {
+      padding: 15px;
+    }
+
+    .doctor-details-biography h3 {
+      font-size: 20px;
+    }
+
+    ul li {
+      font-size: 14px;
+    }
+  }
+  
+  /* General Styling */
+  .doctor-details-item {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(50px); /* Start slightly below */
+    transition: opacity 1s, transform 1s;
+  }
+
+  /* Scroll-triggered Animation */
+  .doctor-details-item.visible {
+    opacity: 1;
+    transform: translateY(0); /* Move to original position */
+  }
+
+  /* Hover Effect for Doctor Item */
+  .doctor-details-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Doctor Name Styling */
+  .doctor-name h3.name {
+    font-size: 30px;
+    color: #333;
+    transition: color 0.3s ease;
+  }
+
+  /* Biography Section Styling */
+  .doctor-details-biography {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-left: 5px solid #007bff;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    opacity: 0; /* Initially hidden */
+    transform: translateX(-30px); /* Start slightly off the left */
+  }
+
+  /* Scroll-triggered Animation */
+  .doctor-details-biography.visible {
+    opacity: 1;
+    transform: translateX(0); /* Move to original position */
+  }
+
+  /* List Items Styling (Education and Experience) */
+  ul li {
+    font-size: 16px;
+    color: #333;
+    transition: color 0.3s ease;
+  }
+
+  ul li:hover {
+    color: #007bff;
+    cursor: pointer;
+  }
+
+  /* Media Queries for Responsiveness */
+  @media (max-width: 767px) {
+    .doctor-name h3.name {
+      font-size: 26px;
+    }
+
+    .doctor-details-item {
+      padding: 15px;
+    }
+
+    .doctor-details-biography h3 {
+      font-size: 20px;
+    }
+
+    ul li {
+      font-size: 14px;
+    }
+  }
+</style>
+
+</style>
+
+    <!-- Meta Tag -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="copyright" content="pavilan" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Title -->
+    <title>Medical and Doctor </title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/favicon.png" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- Nice Select CSS -->
+    <link rel="stylesheet" href="css/nice-select.css" />
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <!-- icofont CSS -->
+    <link rel="stylesheet" href="css/icofont.css" />
+    <!-- Slicknav -->
+    <link rel="stylesheet" href="css/slicknav.min.css" />
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="css/owl-carousel.css" />
+    <!-- Datepicker CSS -->
+    <link rel="stylesheet" href="css/datepicker.css" />
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="css/animate.min.css" />
+    <!-- Magnific Popup CSS -->
+    <link rel="stylesheet" href="css/magnific-popup.css" />
+
+    <!-- Mediplus CSS -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+
+    <!-- Color CSS -->
+    <link rel="stylesheet" href="css/color/color1.css" />
+
+    <link rel="stylesheet" id="colors" />
+  </head>
+  <body>
+    <!-- Preloader -->
+    <div class="preloader">
+      <div class="loader">
+        <div class="loader-outter"></div>
+        <div class="loader-inner"></div>
+
+        <div class="indicator">
+          <!-- <svg width="16px" height="12px">
+            <polyline id="back" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+            <polyline
+              id="front"
+              points="1 6 4 6 6 11 10 1 12 6 15 6"
+            ></polyline>
+          </svg> -->
+        </div>
+      </div>
+    </div>
+    <!-- End Preloader -->
+
+    <!-- Mediplus Color Plate -->
+    <!-- <div class="color-plate">
+      <a class="color-plate-icon"><i class="fa fa-cog fa-spin"></i></a>
+      <h4>Mediplus</h4>
+      <p>Here is some awesome color's available on Mediplus Template.</p>
+      <span class="color1"></span>
+      <span class="color2"></span>
+      <span class="color3"></span>
+      <span class="color4"></span>
+      <span class="color5"></span>
+      <span class="color6"></span>
+      <span class="color7"></span>
+      <span class="color8"></span>
+      <span class="color9"></span>
+      <span class="color10"></span>
+      <span class="color11"></span>
+      <span class="color12"></span>
+      <div class="rtl-version">
+        <h4>RTL Version</h4>
+        <ul class="option-box">
+          <li class="rtl-btn">RTL Version</li>
+          <li class="ltr-btn active">LTR Version</li>
+        </ul>
+      </div>
+    </div> -->
+    <!-- /End Color Plate -->
+
+    <!-- Header Area -->
+     <header class="header">
+      <!-- Topbar -->
+      <div class="topbar">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 col-md-5 col-12">
+              <!-- Contact -->
+              <ul class="top-link">
+                <li><a href="about.html">About</a></li>
+                <li><a href="doctor-details.html">Doctors</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <!-- <li><a href="faq.html">FAQ</a></li> -->
+              </ul>
+              <!-- End Contact -->
+            </div>
+            <div class="col-lg-6 col-md-7 col-12">
+              <!-- Top Contact -->
+              <ul class="top-contact">
+                <li><i class="fa fa-phone"></i><a href="9444469179">9444469179</a></li>
+                <li>
+                  <i class="fa fa-envelope"></i
+                  ><a href="mailto:devashik559@gmail.com"
+                    >ganapu86@gmail.com</a
+                  >
+                </li>
+              </ul>
+              <!-- End Top Contact -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Topbar -->
+      <!-- Header Inner -->
+      <div class="header-inner" style="background-color: rgb(232, 175, 5);">
+        <div class="container">
+          <div class="inner">
+            <div class="row align-items-center">
+              <div class="col-lg-3 col-md-3 col-12">
+                <!-- Start Logo -->
+                <div class="logo">
+                  <a href="index.html"><img src="dr vg kideny logo.png" alt="#" /></a>
+                </div>
+                <!-- End Logo -->
+                <!-- Mobile Nav -->
+                <div class="mobile-nav"></div>
+                <!-- End Mobile Nav -->
+              </div>
+              <div class="col-lg-7 col-md-9 col-12">
+                <!-- Main Menu -->
+              <div class="main-menu">
+                  <nav class="navigation">
+                    <ul class="nav menu">
+                      <li class="active">
+                        <a href="index.html"
+                          >Home 
+                       
+                      </a>
+                        <!-- <ul class="dropdown">
+                          <li class="active">
+                            <a href="index.html">Home Page 1</a>
+                          </li>
+                        
+                        </ul> -->
+                      </li>
+                      <li>
+                        <a href="doctor-details.html"
+                          >Doctors 
+                       </a>
+                        
+                      </li>
+                      <li>
+                        <a href="#"
+                          >Services <i class="icofont-rounded-down"></i
+                        ></a>
+                         <ul class="dropdown">
+                         
+                            <a href="service.html">Service Details</a>
+                          </li>
+                          <li>
+                            <a href="kidny.html">Kidney Stone</a>
+                          </li>
+                          <li>
+                            <a href="prostate.html">Prostate Problems</a>
+                          </li>
+                          <li>
+                            <a href="ANDROLOGY.html">Andrology
+</a>
+                          </li>
+                          <li>
+                            <a href="male .html">Male Infertility
+</a>
+                          </li>
+                          <li>
+                            <a href="pedia.html">Pediatric urology</a>
+                          </li>
+                          <li>
+                            <a href="urage.html">Urogynaecology</a>
+                          </li>
+                       
+                        </ul>
+                      </li>
+                      <!-- blog start -->
+                      <li>
+                        <a href="#"
+                          >gallery <i class="icofont-rounded-down"></i
+                        ></a>
+                         <ul class="dropdown">
+                          <li><a href="news.html">News</a></li>
+                          <li>
+                            <a href="events.html">Event</a>
+                          </li>
+                          <li>
+                            <a href="publication.html">publication</a>
+                          </li>
+                          <li>
+                            <a href="interview.html">interviews</a>
+                          </li>
+                         
+                          
+                       
+                        </ul>
+
+                      </li>
+                      
+                      <li><a href="about.html">About Us</a></li>
+                      <!-- <li>
+                        <a href="#"
+                          >Pages <i class="icofont-rounded-down"></i
+                        ></a>
+                        <ul class="dropdown">
+                          <li><a href="about.html">About Us</a></li>
+                          <li><a href="appointment.html">Appointment</a></li>
+                          <li><a href="time-table.html">Time Table</a></li>
+                          <li><a href="testimonials.html">Testimonials</a></li>
+                          <li><a href="pricing.html">Our Pricing</a></li>
+                          <li><a href="register.html">Sign Up</a></li>
+                          <li><a href="login.html">Login</a></li>
+                          <li><a href="faq.html">Faq</a></li>
+                          <li><a href="mail-success.html">Mail Success</a></li>
+                          <li><a href="404.html">404 Error</a></li>
+                        </ul>
+                      </li> -->
+                
+                      <!-- <li>
+                        <a href="#"
+                          >Blogs <i class="icofont-rounded-down"></i
+                        ></a>
+                        <ul class="dropdown">
+                          <li><a href="blog-grid.html">Blog Grid</a></li>
+                          <li><a href="blog-grid.html">Blog Details</a></li>
+                        </ul>
+                      </li> -->
+                      <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                  </nav>
+                </div>
+                <!--/ End Main Menu -->
+              </div>
+              <div class="col-lg-2 col-12">
+                <div class="get-quote">
+                  <a href="appointment.html" class="btn"> Appointment</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--/ End Header Inner -->
+    </header>
+    <!-- End Header Area -->
+
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs overlay">
+      <div class="container">
+        <div class="bread-inner">
+          <div class="row">
+            <div class="col-12">
+              <h2>Doctor Details</h2>
+              <ul class="bread-list">
+                <li><a href="index.html">Home</a></li>
+                <li><i class="icofont-simple-right"></i></li>
+                <li class="active">Doctor Details</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Breadcrumbs -->
+
+    <!-- Doctor Details -->
+    <div class="doctor-details-area section" style="box-shadow: #c80707;">
+      <div class="container" style="box-shadow: #c80707;">
+        <div class="row" style="box-shadow: #c80707;">
+          <div class="col-lg-5" style="box-shadow: #c80707;">
+            <div class="doctor-details-item doctor-details-left" style="box-shadow: #c80707;">
+              <img  style="box-shadow: #c80707;" src="vijay dr.jpg" alt="#" />
+              <div class="doctor-details-contact">
+                <h3>Contact info</h3>
+                <ul class="basic-info">
+                  <li>
+                    <i class="icofont-ui-call"></i>
+                    Call :7598198133
+                  </li>
+                  </li>
+                  <li>
+                    <i class="icofont-ui-message"></i>
+ganapu86@gmail.com                  </li>
+                  <li>
+                    <i class="icofont-location-pin"></i>
+ #14B ,First cross, Perumal Raja Garden, Reddiyarapalayam 605010 
+                  </li>
+                </ul>
+                <!-- Social -->
+                <ul class="social">
+                  <li>
+                    <a href="https://web.facebook.com/profile.php?id=100087008342474"><i class="icofont-facebook"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="icofont-google-plus"></i></a>
+                  </li>
+                  <li>
+                    <a href="https://web.facebook.com/profile.php?id=100087008342474"><i class="icofont-twitter"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="icofont-vimeo"></i></a>
+                  </li>
+                  <li>
+                    <a href="https://www.pinterest.com/junayed143/"><i class="icofont-pinterest"></i></a>
+                  </li>
+                </ul>
+                <!-- End Social -->
+                <div class="doctor-details-work">
+                  <h3>Working hours</h3>
+                  <ul class="time-sidual">
+                    <li class="day">
+                      Monday - Friday <span> 6.00 PM-9.00PM</span>
+                    </li>
+                    <li class="day">Saturday & Sunday<span> by Appointment
+​</span></li>
+                   
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+         <div class="col-lg-7">
+  <div class="doctor-details-item">
+    <div class="doctor-details-right">
+      <div class="doctor-name">
+        <h3 class="name">Dr. Vijay Ganapathy</h3>
+        <p class="deg">Urologist & Andrologist</p>
+        <p class="degree">MCh in Urology, Andrology Fellowship (Singapore General Hospital)</p>
+      </div>
+
+      <div class="doctor-details-biography">
+        <h3>Biography</h3>
+        <p>
+          I am Dr. Vijay Ganapathy, a native of the French city of Pondicherry. After a memorable schooling in Petit Seminaire High School, I went on to study Medicine, giving life to my wings-of-flight, in Pondicherry Institute of Medical Sciences, Pondicherry University.
+        </p>
+        <br />
+        <p>
+          I furthered my education with a Master’s in surgery in Jawaharlal Institute of Postgraduate Medical Education and Research (JIPMER), Puducherry, India. I was beginning to fly, like a little bird that took the first jump from a cliff. Of course, the wings which were prepared for years made sure it gave the best experience and I passed out as the topper with a gold medal.
+        </p>
+        <br />
+        <p>
+          When flying became a routine, the next desire was to take on distances and heights. I completed the Urological Residency MCh in Institute of Nephrourology, Bengaluru, a dedicated center for nephrology and urology (performing around 500-600 urological surgeries every month) and center of excellence in Laparoscopic and Renal Transplant. I went on to completing the Andrology Fellowship sub-specialization in Singapore General Hospital and NUHS, Singapore.
+        </p>
+        <br />
+        <p>
+          The journey paved way for my research in Urodynamics, the Study of Urinary Dynamics, and I was honored with the Urogynaecology Fellowship from the International Continence Society (ICS 2017), Florence, Italy. This is a significant milestone as it brought me an opportunity to present my study on an international forum. This time the flight was granted by the Indian Council of Medical Research (ICMR)’s travel grant.
+        </p>
+        <br />
+        <p>
+          I also went on to present my novel work on T. Pregabalin’s efficacy in stent removal, a study I put forth before the World Congress of Endourology held in Paris, 2018.
+        </p>
+      </div>
+
+      <div class="doctor-details-biography">
+        <h3>Education</h3>
+        <ul>
+          <li>PhD degree in Urology at University of Mediserv (2006)</li>
+          <li>Master of Surgery at Jawaharlal Institute of Postgraduate Medical Education and Research (JIPMER) (2002)</li>
+          <li>MBBS in Medicine at Pondicherry Institute of Medical Sciences (2002)</li>
+          <li>Higher Secondary Certificate at Petit Seminaire High School (1991)</li>
+        </ul>
+      </div>
+
+      <div class="doctor-details-biography">
+        <h3>Research & Achievements</h3>
+        <p>
+          During my career, I have contributed significantly to research in urology and andrology, with a specific focus on urinary dynamics, minimally invasive techniques, and male reproductive health. I was awarded the Urogynaecology Fellowship in 2017 by the International Continence Society (ICS) in Florence, Italy. 
+        </p>
+        <br />
+        <p>
+          I also presented a pioneering study on the efficacy of T. Pregabalin in stent removal at the World Congress of Endourology in Paris (2018). This study aims to improve patient care by reducing pain and complications during the stent removal process.
+        </p>
+        <br />
+        <p>
+          As a researcher, I am driven to innovate and bring forward cutting-edge solutions to improve the quality of care for my patients.
+        </p>
+      </div>
+
+      <div class="doctor-details-biography">
+        <h3>Field of Expertise</h3>
+        <p>
+          Today, as a practicing urologist, my field of interest and care is Minimal Invasive Management for stone diseases, in terms of scarless/keyhole surgery, as well as vascular access for kidney failure patients. I focus on providing the most advanced and least invasive treatment options available for my patients.
+        </p>
+        <br />
+        <p>
+          Additionally, I have a deep passion for creating awareness about Men's Health Management, a field that is still often misunderstood and underappreciated in many parts of the world. Through my work, I aim to break the taboo surrounding men's health, encouraging men to prioritize their well-being.
+        </p>
+        <br />
+        <p>
+          My mission is to empower men to take charge of their health and well-being by providing education, personalized care, and innovative treatments. If health is wealth, then awareness is the means to it.
+        </p>
+      </div>
+
+      <div class="doctor-details-biography">
+        <h3>Professional Experience</h3>
+        <ul>
+          <li>Consultant Urologist & Andrologist at [Clinic Name], [City], [Country]</li>
+          <li>Former Andrology Fellow at Singapore General Hospital, Singapore</li>
+          <li>Former Consultant Urologist at Institute of Nephrourology, Bengaluru, India</li>
+          <li>Visiting Consultant for Male Health Issues at Various International Conferences</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+    <!-- End Doctor Details -->
+
+      <!-- Footer Area -->
+    <footer id="footer" class="footer">
+      <!-- Footer Top -->
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-6 col-12">
+              <div class="single-footer">
+                <h2>About Us</h2>
+                <p>
+                 About Dr. Vijay Ganapathy:
+Urologist & Andrologist specializing in scarless kidney surgeries and men’s health.
+Trained internationally with gold-medal honors and global research credentials.
+                </p>
+                <!-- Social -->
+                <ul class="social">
+                  <li>
+                    <a href="https://www.facebook.com/DrVGUrologist/"><i class="icofont-facebook"></i></a>
+                  </li>
+                  <li>
+                    <a href="https://www.instagram.com/dr.vgkidneystoneclinic/"><i class="icofont-instagram"></i></a>
+                  </li>
+                  <li>
+                    <a href="https://www.facebook.com/DrVGUrologist/"><i class="icofont-twitter"></i></a>
+                  </li>
+                  
+                  <li>
+                    <a href="http://www.youtube.com/@dr.vgkidneystoneclinicpond235"><i class="icofont-youtube"></i></a>
+                  </li>
+                </ul>
+                <!-- End Social -->
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-12">
+              <div class="single-footer f-link">
+                <h2>Quick Links</h2>
+                <div class="row">
+                  <div class="col-lg-6 col-md-6 col-12">
+                    <ul>
+                      <li>
+                        <a href="index.html"
+                          ><i class="fa fa-caret-right" aria-hidden="true"></i
+                          >Home</a
+                        >
+                      </li>
+                      <li>
+                        <a href="about.html"
+                          ><i class="fa fa-caret-right" aria-hidden="true"></i
+                          >About Us</a
+                        >
+                      </li>
+                      <li>
+                        <a href="service.html"
+                          ><i class="fa fa-caret-right" aria-hidden="true"></i
+                          >Services</a
+                        >
+                      </li>
+                      <!-- <li>
+                        <a href="#"
+                          ><i class="fa fa-caret-right" aria-hidden="true"></i
+                          >Our Cases</a
+                        >
+                      </li> -->
+                      <li>
+                        <a href="http://www.youtube.com/@dr.vgkidneystoneclinicpond235"
+                          ><i class="fa fa-caret-right" aria-hidden="true"></i
+                          >Other Links</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-12">
+                    <ul>
+                      <li>
+                        <a href="appointment.html"
+                          ><i class="fa fa-caret-right" aria-hidden="true"></i
+                          > consulting</a
+                        >
+                      </li>
+                      <li>
+                        <a href="about.html"
+                          ><i class="fa fa-caret-right" aria-hidden="true"></i
+                          >clinic</a
+                        >
+                      </li>
+                     
+                      <!-- <li>
+                        <a href="#"
+                          ><i class="fa fa-caret-right" aria-hidden="true"></i
+                          >FAQ</a
+                        >
+                      </li> -->
+                      <li>
+                        <a href="contact.html"
+                          ><i class="fa fa-caret-right" aria-hidden="true"></i
+                          >Contact Us</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-12">
+              <div class="single-footer">
+                <h2>Open Hours</h2>
+                <p>
+                  Our clinic is open to serve you during the following hours.
+                </p>
+                <ul class="time-sidual">
+                  <li class="day">Monday - Friday <span>6pm-9pm</span></li>
+                  <li class="day">Saturday-sunday<span>appointment only</span></li>
+                
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-12">
+              <div class="single-footer">
+               <h2>Newsletter</h2>
+<p>
+  Subscribe to our newsletter to receive the latest clinic news, health tips, and updates directly in your inbox.
+</p>
+
+                <!-- <form
+                  action="ganapu86@gmail.com"
+                  method="get"
+                  class="newsletter-inner"
+                >
+                  <input
+                    name="email"
+                    placeholder="Email Address"
+                    class="common-input"
+                    onfocus="this.placeholder = ''"
+                    onblur="this.placeholder = 'Your email address'"
+                    required=""
+                    type="email"
+                  />
+                  <button class="button">
+                    <i class="icofont icofont-paper-plane"></i>
+                  </button>
+                </form> -->
+            <form id="newsletter-form" class="newsletter-inner">
+  <input name="user_email" type="email" placeholder="Your email address" required class="common-input" />
+  <button type="submit" class="button"><i class="icofont icofont-paper-plane"></i></button>
+</form>
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("srgTZHet4xIuVbBkV");
+  })();
+</script>
+
+<script>
+document.getElementById('newsletter-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  emailjs.sendForm('service_s8sxhpp', 'template_lofsjcf', this)
+    .then(() => {
+      alert('Newsletter subscription sent!');
+    }, (error) => {
+      alert('Failed to send. Please try again.');
+    });
+});
+</script>
+  </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--/ End Footer Top -->
+      <!-- Copyright -->
+      <div class="copyright">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-12">
+              <div class="copyright-content">
+               <p>
+                  © Copyright <script type="text/javascript">var year = new Date(); document.write(year.getFullYear());</script> by <a href="#"> | All Rights Reserved 
+                  <a href="index.html">vg</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--/ End Copyright -->
+    </footer>
+    <!--/ End Footer Area -->
+<script>
+  let lastScrollTop = 0;
+  const header = document.querySelector("header.header");
+
+  window.addEventListener("scroll", function () {
+    let st = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (window.innerWidth <= 767) { // Mobile only
+      if (st > lastScrollTop) {
+        // Scrolling down
+        header.classList.add("hide-header");
+      } else {
+        // Scrolling up
+        header.classList.remove("hide-header");
+      }
+    } else {
+      header.classList.remove("hide-header"); // Always show on desktop
+    }
+
+    lastScrollTop = st <= 0 ? 0 : st; // Prevent negative
+  }, false);
+</script>
+
+    <!-- jquery Min JS -->
+    <script src="js/jquery.min.js"></script>
+    <!-- jquery Migrate JS -->
+    <script src="js/jquery-migrate.js"></script>
+    <!-- Easing JS -->
+    <script src="js/easing.js"></script>
+    <!-- Color JS -->
+    <script src="js/colors.js"></script>
+    <!-- Popper JS -->
+    <script src="js/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Bootstrap Datepicker JS -->
+    <script src="js/bootstrap-datepicker.js"></script>
+    <!-- Jquery Nav JS -->
+    <script src="js/jquery.nav.js"></script>
+    <!-- Slicknav JS -->
+    <script src="js/slicknav.min.js"></script>
+    <!-- ScrollUp JS -->
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <!-- Niceselect JS -->
+    <script src="js/niceselect.js"></script>
+    <!-- Tilt Jquery JS -->
+    <script src="js/tilt.jquery.min.js"></script>
+    <!-- Owl Carousel JS -->
+    <script src="js/owl-carousel.js"></script>
+    <!-- counterup JS -->
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <!-- Steller JS -->
+    <script src="js/steller.js"></script>
+    <!-- Wow JS -->
+    <script src="js/wow.min.js"></script>
+    <!-- Magnific Popup JS -->
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <!-- Main JS -->
+    <script src="js/main.js"></script><script>
+  // Select all elements you want to animate
+  const elementsToAnimate = document.querySelectorAll('.doctor-details-item, .doctor-details-biography');
+
+  // Intersection Observer options
+  const options = {
+    root: null, // Use the viewport
+    threshold: 0.5, // Trigger animation when 50% of the element is in view
+  };
+
+  // Create an Intersection Observer callback
+  const observerCallback = (entries, observer) => {
+    entries.forEach(entry => {
+      // If the element is in view
+      if (entry.isIntersecting) {
+        // Add the 'visible' class to trigger animation
+        entry.target.classList.add('visible');
+        // Stop observing once the animation is triggered
+        observer.unobserve(entry.target);
+      }
+    });
+  };
+
+  // Create an IntersectionObserver instance
+  const observer = new IntersectionObserver(observerCallback, options);
+
+  // Observe each element
+  elementsToAnimate.forEach(element => {
+    observer.observe(element);
+  });
+</script>
+
+  </body>
+</html>
