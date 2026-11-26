@@ -16,18 +16,29 @@
       });
     }
 
-    /* 2. Sticky Header shadow & Back-to-top button */
+    /* 2. Smart Sticky Header (hide on scroll down, show on scroll up) & Back-to-top */
     var siteHeader = document.querySelector(".vg-header");
     var scrollTopBtn = document.querySelector(".vg-scroll-top");
+    var lastScrollY = window.scrollY || window.pageYOffset || 0;
 
     function handleScroll() {
-      var y = window.scrollY || window.pageYOffset;
+      var y = Math.max(0, window.scrollY || window.pageYOffset || 0);
       if (siteHeader) {
         siteHeader.classList.toggle("is-scrolled", y > 24);
+        var drawerOpen = document.querySelector(".vg-mobile-drawer.is-open");
+        var delta = y - lastScrollY;
+        if (drawerOpen || y <= 110) {
+          siteHeader.classList.remove("is-hidden");
+        } else if (delta > 6 && y > 130) {
+          siteHeader.classList.add("is-hidden");
+        } else if (delta < -4) {
+          siteHeader.classList.remove("is-hidden");
+        }
       }
       if (scrollTopBtn) {
         scrollTopBtn.classList.toggle("is-visible", y > 420);
       }
+      lastScrollY = y;
     }
 
     window.addEventListener("scroll", handleScroll, { passive: true });

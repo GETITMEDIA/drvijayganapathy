@@ -584,7 +584,13 @@ h6 {
   background: rgba(255, 255, 255, 0.96);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--vg-border);
-  transition: box-shadow 0.3s ease;
+  transition: transform 0.35s var(--vg-ease), box-shadow 0.3s ease;
+  will-change: transform;
+}
+
+.vg-header.is-hidden {
+  transform: translateY(-100%);
+  box-shadow: none;
 }
 
 .vg-header.is-scrolled {
@@ -639,7 +645,7 @@ h6 {
 }
 
 .vg-navbar {
-  padding: 10px 0;
+  padding: 8px 0;
 }
 
 .vg-navbar-inner {
@@ -657,7 +663,7 @@ h6 {
 }
 
 .vg-brand img {
-  height: 54px;
+  height: 70px;
   width: auto;
   object-fit: contain;
 }
@@ -1851,36 +1857,39 @@ h6 {
    Emergency & Direct Care CTA Banner
    ========================================================================== */
 .vg-cta-banner {
-  background: linear-gradient(125deg, #0A1E38 0%, #0F2744 45%, #0D646B 100%);
+  background: url("../img/cta_bg.png") center right / cover no-repeat;
   color: var(--vg-white);
   border-radius: var(--vg-radius-lg);
-  padding: clamp(32px, 5vw, 56px);
+  padding: clamp(34px, 5vw, 60px);
   display: grid;
-  grid-template-columns: 1.25fr 0.75fr;
+  grid-template-columns: 1.15fr 0.85fr;
   gap: 28px;
   align-items: center;
   box-shadow: var(--vg-shadow-lg);
+  border: 1px solid rgba(15, 39, 68, 0.14);
   position: relative;
   overflow: hidden;
+  min-height: 280px;
 }
 
-.vg-cta-banner>* {
-  position: relative;
-  z-index: 2;
-}
-
-.vg-cta-banner::after {
+.vg-cta-banner::before {
   content: "";
   position: absolute;
-  width: 380px;
-  height: 380px;
-  right: -130px;
-  top: -190px;
-  border: 1px solid rgba(229, 169, 26, 0.22);
-  background: radial-gradient(circle, rgba(24, 159, 163, 0.18) 0%, transparent 65%);
-  border-radius: 50%;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    96deg,
+    rgba(9, 24, 46, 0.92) 0%,
+    rgba(9, 24, 46, 0.82) 38%,
+    rgba(9, 24, 46, 0.48) 66%,
+    rgba(9, 24, 46, 0.22) 100%
+  );
   pointer-events: none;
-  animation: vgOrbFloatA 14s ease-in-out infinite alternate;
+}
+
+.vg-cta-banner > * {
+  position: relative;
+  z-index: 2;
 }
 
 .vg-cta-banner h2 {
@@ -2376,6 +2385,622 @@ h6 {
   font-weight: 700;
   font-size: 0.78rem;
   margin-bottom: 10px;
+}
+
+/* Doctor Profile Page Enhanced Components */
+.vg-doc-banner {
+  position: relative;
+  background: url("../img/generated/doctor-hero-vijay.jpg") right top / cover no-repeat;
+  background-color: #071A34;
+  color: var(--vg-white);
+  min-height: clamp(460px, 56vh, 560px);
+  display: flex;
+  align-items: center;
+  padding: clamp(64px, 7vw, 96px) 0 clamp(76px, 8vw, 108px);
+  overflow: hidden;
+  border-bottom: 3px solid var(--vg-gold-bright);
+}
+
+.vg-doc-banner-scrim {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(95deg, rgba(6, 22, 44, 0.84) 0%, rgba(6, 22, 44, 0.52) 44%, rgba(6, 22, 44, 0) 68%);
+  pointer-events: none;
+}
+
+.vg-doc-wave {
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: clamp(42px, 5vw, 72px);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.vg-doc-wave svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.vg-doc-banner .container {
+  position: relative;
+  z-index: 2;
+}
+
+.vg-doc-hero-copy {
+  max-width: 610px;
+}
+
+.vg-doc-banner h1 {
+  font-family: var(--vg-font-display);
+  color: var(--vg-white);
+  font-size: clamp(2.1rem, 4.1vw, 3.45rem);
+  font-weight: 700;
+  line-height: 1.12;
+  margin-bottom: 16px;
+}
+
+.vg-doc-name-gold {
+  display: inline-block;
+  position: relative;
+  font-style: italic;
+  color: var(--vg-gold-bright);
+}
+
+.vg-doc-swoop {
+  display: block;
+  width: min(320px, 72%);
+  height: 14px;
+  margin-top: 2px;
+}
+
+.vg-doc-banner p {
+  color: rgba(255, 255, 255, 0.88);
+  font-size: clamp(0.96rem, 1.1vw, 1.06rem);
+  max-width: 540px;
+  margin-bottom: 22px;
+}
+
+.vg-doc-hero-badges {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: -34px;
+  position: relative;
+  z-index: 10;
+}
+
+.vg-doc-badge-card {
+  background: var(--vg-white);
+  border: 1px solid var(--vg-border);
+  border-radius: var(--vg-radius-md);
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: var(--vg-shadow-md);
+  transition: transform 0.3s var(--vg-ease), box-shadow 0.3s var(--vg-ease), border-color 0.25s ease;
+}
+
+.vg-doc-badge-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--vg-shadow-lg);
+  border-color: rgba(13, 122, 126, 0.35);
+}
+
+.vg-doc-badge-ico {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: var(--vg-teal-soft);
+  color: var(--vg-teal);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.05rem;
+  flex-shrink: 0;
+}
+
+.vg-doc-badge-card strong {
+  display: block;
+  color: var(--vg-navy);
+  font-size: 0.92rem;
+  line-height: 1.25;
+}
+
+.vg-doc-badge-card > div span {
+  display: block;
+  color: var(--vg-muted);
+  font-size: 0.78rem;
+}
+
+.vg-doc-quote-card {
+  background: linear-gradient(135deg, var(--vg-alabaster) 0%, #FFFFFF 100%);
+  border: 1px solid var(--vg-border);
+  border-left: 4px solid var(--vg-teal);
+  border-radius: var(--vg-radius-md);
+  padding: 24px 26px;
+  margin-bottom: 24px;
+  box-shadow: var(--vg-shadow-xs);
+  position: relative;
+}
+
+.vg-doc-quote-card blockquote {
+  margin: 0;
+  font-family: var(--vg-font-display);
+  font-size: clamp(1.06rem, 1.4vw, 1.24rem);
+  font-style: italic;
+  color: var(--vg-navy);
+  line-height: 1.55;
+}
+
+.vg-doc-quote-card cite {
+  display: block;
+  margin-top: 10px;
+  font-style: normal;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--vg-teal);
+}
+
+.vg-doc-exp-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.vg-doc-exp-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px;
+  border-radius: var(--vg-radius-md);
+  background: var(--vg-alabaster);
+  border: 1px solid var(--vg-border);
+  color: var(--vg-navy);
+  transition: transform 0.3s var(--vg-ease), box-shadow 0.3s var(--vg-ease), border-color 0.25s ease, background-color 0.25s ease;
+}
+
+.vg-doc-exp-card:hover {
+  transform: translateY(-4px);
+  background: var(--vg-white);
+  border-color: rgba(13, 122, 126, 0.35);
+  box-shadow: var(--vg-shadow-sm);
+  color: var(--vg-navy);
+}
+
+.vg-doc-exp-ico {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: var(--vg-teal-soft);
+  color: var(--vg-teal);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.05rem;
+  flex-shrink: 0;
+  transition: transform 0.3s var(--vg-ease), background-color 0.25s ease, color 0.25s ease;
+}
+
+.vg-doc-exp-card:hover .vg-doc-exp-ico {
+  transform: scale(1.08) rotate(-4deg);
+  background: var(--vg-teal);
+  color: var(--vg-white);
+}
+
+.vg-doc-exp-card strong {
+  display: block;
+  font-size: 0.94rem;
+  margin-bottom: 2px;
+}
+
+.vg-doc-exp-card small {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--vg-muted);
+  line-height: 1.45;
+}
+
+.vg-timeline-tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--vg-teal);
+  background: var(--vg-teal-soft);
+  padding: 3px 10px;
+  border-radius: 999px;
+  margin-bottom: 8px;
+}
+
+.vg-doc-exp-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 8px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--vg-teal);
+  transition: gap 0.25s ease;
+}
+
+.vg-doc-exp-card:hover .vg-doc-exp-more {
+  gap: 8px;
+}
+
+/* Doctor Details Cards, Gallery & Micro-Animations */
+.vg-card {
+  background: var(--vg-white);
+  border: 1px solid var(--vg-border);
+  border-radius: var(--vg-radius-lg, 20px);
+  padding: clamp(22px, 2.6vw, 32px);
+  box-shadow: var(--vg-shadow-sm);
+  transition: transform 0.35s var(--vg-ease), box-shadow 0.35s var(--vg-ease), border-color 0.3s ease;
+}
+
+.vg-card:hover {
+  box-shadow: var(--vg-shadow-md);
+  border-color: rgba(13, 122, 126, 0.28);
+}
+
+.vg-doc-exp-card {
+  position: relative;
+  overflow: hidden;
+  padding: 22px 20px;
+}
+
+.vg-doc-exp-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--vg-teal), var(--vg-gold-bright));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s var(--vg-ease);
+}
+
+.vg-doc-exp-card:hover::before {
+  transform: scaleX(1);
+}
+
+.vg-doc-exp-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--vg-shadow-md);
+}
+
+.vg-timeline-item {
+  transition: transform 0.3s var(--vg-ease), box-shadow 0.3s var(--vg-ease), border-color 0.25s ease;
+}
+
+.vg-timeline-item:hover {
+  transform: translateX(6px);
+  box-shadow: var(--vg-shadow-md);
+  border-color: rgba(13, 122, 126, 0.35);
+}
+
+.vg-gallery-card {
+  background: var(--vg-white);
+  border: 1px solid var(--vg-border);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: var(--vg-shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.35s var(--vg-ease), box-shadow 0.35s var(--vg-ease), border-color 0.3s ease;
+}
+
+.vg-gallery-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--vg-shadow-lg);
+  border-color: rgba(13, 122, 126, 0.32);
+}
+
+.vg-gallery-card img {
+  transition: transform 0.55s var(--vg-ease);
+}
+
+.vg-gallery-card:hover img {
+  transform: scale(1.05);
+}
+
+.vg-gallery-caption {
+  padding: 18px 20px 20px;
+  flex: 1;
+}
+
+.vg-gallery-caption h4 {
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: var(--vg-navy);
+  margin-bottom: 6px;
+}
+
+.vg-gallery-caption p {
+  font-size: 0.86rem;
+  color: var(--vg-text-soft);
+  margin: 0;
+  line-height: 1.55;
+}
+
+/* Enhanced Doctor Profile Middle Sections */
+.vg-doc-aside {
+  background: linear-gradient(175deg, #09203F 0%, #0A2E4D 58%, #0D4F5F 100%);
+  box-shadow: var(--vg-shadow-lg);
+}
+
+.vg-doc-tnmc-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: #E7F1F8;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 999px;
+  margin-top: 6px;
+}
+
+.vg-doc-tnmc-pill i {
+  color: var(--vg-gold-bright);
+}
+
+.vg-doc-quote-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  background: linear-gradient(135deg, #FFFFFF 0%, #F4FAFB 75%, #E7F4F6 100%);
+  border: 1px solid rgba(13, 122, 126, 0.16);
+  border-left: 4px solid var(--vg-teal);
+  border-radius: 18px;
+  padding: 22px 26px;
+  box-shadow: var(--vg-shadow-sm);
+  overflow: hidden;
+  transition: transform 0.35s var(--vg-ease), box-shadow 0.35s var(--vg-ease);
+}
+
+.vg-doc-quote-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--vg-shadow-md);
+}
+
+.vg-doc-quote-mark {
+  font-family: Georgia, serif;
+  font-size: 3.4rem;
+  line-height: 0.8;
+  color: var(--vg-teal);
+  font-weight: 700;
+  flex-shrink: 0;
+  align-self: flex-start;
+  margin-top: 4px;
+}
+
+.vg-doc-quote-art {
+  width: 68px;
+  height: 68px;
+  flex-shrink: 0;
+  opacity: 0.85;
+  color: var(--vg-teal);
+}
+
+.vg-doc-stat-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #FFFFFF;
+  border: 1px solid var(--vg-border);
+  border-radius: 14px;
+  padding: 14px 15px;
+  box-shadow: 0 4px 14px rgba(10, 34, 66, 0.04);
+  height: 100%;
+  transition: transform 0.3s var(--vg-ease), box-shadow 0.3s var(--vg-ease), border-color 0.25s ease;
+}
+
+.vg-doc-stat-box:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--vg-shadow-md);
+  border-color: rgba(212, 160, 23, 0.45);
+}
+
+.vg-doc-stat-ico {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: #FEF5DF;
+  color: #C48A12;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.05rem;
+  flex-shrink: 0;
+  transition: transform 0.3s var(--vg-ease), background-color 0.25s ease, color 0.25s ease;
+}
+
+.vg-doc-stat-box:hover .vg-doc-stat-ico {
+  transform: scale(1.08);
+  background: var(--vg-gold-bright);
+  color: var(--vg-navy);
+}
+
+.vg-doc-timeline-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.vg-doc-tl-ico {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: #E8F4F6;
+  color: var(--vg-teal);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+  transition: transform 0.3s var(--vg-ease), background-color 0.25s ease, color 0.25s ease;
+}
+
+.vg-timeline-item:hover .vg-doc-tl-ico {
+  transform: scale(1.08) rotate(-4deg);
+  background: var(--vg-teal);
+  color: #FFFFFF;
+}
+
+.vg-doc-tl-label {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--vg-muted);
+  margin-bottom: 3px;
+}
+
+.vg-doc-focus-band {
+  background: linear-gradient(180deg, #ECF5F7 0%, #F7FAFC 100%);
+  border-top: 1px solid rgba(13, 122, 126, 0.12);
+  border-bottom: 1px solid rgba(13, 122, 126, 0.12);
+  position: relative;
+}
+
+.vg-doc-exp-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #FFFFFF;
+  border: 1px solid var(--vg-border);
+  border-radius: 18px;
+  padding: 24px 22px;
+  box-shadow: 0 8px 22px rgba(10, 34, 66, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.vg-doc-exp-card::after {
+  content: "";
+  position: absolute;
+  right: -18px;
+  bottom: -18px;
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(242, 201, 76, 0.22) 0%, rgba(242, 201, 76, 0) 70%);
+  pointer-events: none;
+  transition: transform 0.35s var(--vg-ease), opacity 0.35s ease;
+}
+
+.vg-doc-exp-card:hover::after {
+  transform: scale(1.45);
+}
+
+.vg-doc-exp-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+
+.vg-doc-exp-ico-teal {
+  width: 48px;
+  height: 48px;
+  border-radius: 13px;
+  background: linear-gradient(135deg, #0D7A7E 0%, #084E5C 100%);
+  color: #FFFFFF;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  box-shadow: 0 8px 18px rgba(13, 122, 126, 0.24);
+  transition: transform 0.35s var(--vg-ease), box-shadow 0.35s ease;
+}
+
+.vg-doc-exp-card:hover .vg-doc-exp-ico-teal {
+  transform: scale(1.08) rotate(-5deg);
+  box-shadow: 0 12px 24px rgba(13, 122, 126, 0.34);
+}
+
+.vg-doc-exp-head h4 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--vg-navy);
+  margin: 0;
+  line-height: 1.25;
+}
+
+.vg-doc-step-card {
+  background: #FFFFFF;
+  border: 1px solid var(--vg-border);
+  border-radius: 16px;
+  padding: 20px 22px;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  height: 100%;
+  box-shadow: var(--vg-shadow-xs);
+  transition: transform 0.3s var(--vg-ease), box-shadow 0.3s var(--vg-ease), border-color 0.25s ease;
+}
+
+.vg-doc-step-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--vg-shadow-md);
+  border-color: rgba(13, 122, 126, 0.3);
+}
+
+.vg-doc-step-num {
+  width: 38px;
+  height: 38px;
+  border-radius: 11px;
+  background: linear-gradient(135deg, var(--vg-navy), #103A68);
+  color: var(--vg-gold-bright);
+  font-weight: 800;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+@media (max-width: 575px) {
+  .vg-doc-quote-art {
+    display: none;
+  }
+}
+
+@media (max-width: 991px) {
+  .vg-doc-hero-badges,
+  .vg-doc-exp-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .vg-doc-banner {
+    min-height: auto;
+    background-position: 78% center;
+    padding: 40px 0 48px;
+  }
+  .vg-doc-banner-scrim {
+    background: linear-gradient(180deg, rgba(6, 22, 44, 0.88) 0%, rgba(6, 22, 44, 0.78) 60%, rgba(6, 22, 44, 0.92) 100%);
+  }
+  .vg-doc-hero-badges {
+    margin-top: 20px;
+  }
+  .vg-doc-hero-badges,
+  .vg-doc-exp-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Gallery & News & Events Grid */
@@ -3127,6 +3752,9 @@ z-index: 950;
     order: 0;
   }
 
+  .vg-cta-banner::before {
+    background: linear-gradient(180deg, rgba(9, 24, 46, 0.88) 0%, rgba(9, 24, 46, 0.76) 100%);
+  }
   .vg-cta-actions {
     justify-content: flex-start;
   }
@@ -3243,7 +3871,7 @@ z-index: 950;
   }
 
   .vg-brand img {
-    height: 44px;
+    height: 56px;
   }
 
   .vg-dept-tabs {

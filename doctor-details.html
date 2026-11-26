@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="css/bootstrap.min.css" />
   <link rel="stylesheet" href="css/font-awesome.min.css" />
   <link rel="stylesheet" href="css/icofont.css" />
-  <link rel="stylesheet" href="css/vg-theme.css" />
+  <link rel="stylesheet" href="css/vg-theme.css?v=4" />
 </head>
 <body>
   <div class="vg-preloader" aria-hidden="true"><div class="vg-preloader-ring"></div></div>
@@ -120,40 +120,70 @@
   </div>
 
   <main>
-    <section class="vg-page-hero">
-      <div class="container vg-fade-hero">
-        <span class="vg-eyebrow vg-eyebrow-dark">Consultant Profile</span>
-        <h1>Dr. S. Vijay Ganapathy</h1>
-        <p>MS (JIPMER), DNB (Surgery), MCh (Urology) — Gold Medalist &middot; USI Endourology &amp; Andrology Fellow (Singapore) &middot; ICS Urogynaecology Fellow (Italy)</p>
-        <ul class="vg-breadcrumb">
-          <li><a href="index.html">Home</a></li>
-          <li><i class="icofont-simple-right"></i></li>
-          <li>Doctor Details</li>
-        </ul>
+    <section class="vg-doc-banner">
+      <div class="vg-doc-banner-scrim"></div>
+      <div class="container position-relative" style="z-index:2;">
+        <div class="vg-doc-hero-copy vg-fade-hero">
+          <h1>Meet <span class="vg-doc-name-gold">Dr. S. Vijay Ganapathy <svg class="vg-doc-swoop" viewBox="0 0 320 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M4 13C82 4 218 2 316 11" stroke="url(#vgSwoopGrad)" stroke-width="3.2" stroke-linecap="round"/><defs><linearGradient id="vgSwoopGrad" x1="4" y1="13" x2="316" y2="11" gradientUnits="userSpaceOnUse"><stop stop-color="#f2c94c"/><stop offset="1" stop-color="#d4a017" stop-opacity="0.35"/></linearGradient></defs></svg></span></h1>
+          <p style="font-weight:600; color:var(--vg-gold-bright); margin-bottom:6px;">Consultant Urologist &amp; Andrologist</p>
+          <p>MS (JIPMER), DNB (Surgery), MCh (Urology) &mdash; Gold Medalist</p>
+          <div style="margin-top:24px;">
+            <a href="appointment.html" class="vg-btn vg-btn-gold"><i class="fa fa-calendar-check-o"></i> Book Consultation</a>
+          </div>
+        </div>
       </div>
     </section>
 
+    <section class="pb-2">
+      <div class="container">
+        <div class="vg-doc-hero-badges" data-fade-stagger>
+          <div class="vg-doc-badge-card" data-fade="up">
+            <div class="vg-doc-badge-ico"><i class="icofont-award"></i></div>
+            <div><strong>Gold Medalist</strong><span>MCh Urology &middot; JIPMER Alumnus</span></div>
+          </div>
+          <div class="vg-doc-badge-card" data-fade="up">
+            <div class="vg-doc-badge-ico"><i class="icofont-globe"></i></div>
+            <div><strong>Singapore &amp; Italy</strong><span>International Urology Fellowships</span></div>
+          </div>
+          <div class="vg-doc-badge-card" data-fade="up">
+            <div class="vg-doc-badge-ico"><i class="fa fa-bolt"></i></div>
+            <div><strong>Laser &amp; RIRS</strong><span>Minimally Invasive Stone Care</span></div>
+          </div>
+          <div class="vg-doc-badge-card" data-fade="up">
+            <div class="vg-doc-badge-ico"><i class="icofont-doctor-alt"></i></div>
+            <div><strong>TNMC No. 85606</strong><span>12+ Years Specialist Experience</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Balanced 2-Column Profile & Academic Journey -->
     <section class="vg-section">
       <div class="container">
         <div class="row g-4 align-items-start">
-          <!-- Left Sticky Profile Card -->
+          <!-- Left Sticky Profile & Contact Sidebar -->
           <div class="col-lg-4" data-fade="left">
-            <div class="vg-clinic-aside" style="position:sticky; top:105px;">
-              <img src="vijay dr.jpg" alt="Dr. S. Vijay Ganapathy" style="width:100%; aspect-ratio:4/4.6; object-fit:cover; object-position:top center;" />
-              <div class="vg-clinic-aside-body">
+            <div class="vg-clinic-aside vg-doc-aside" style="position:sticky; top:105px;">
+              <div style="position:relative; overflow:hidden;">
+                <img src="vijay dr.jpg" alt="Dr. S. Vijay Ganapathy" style="width:100%; aspect-ratio:4/4.2; object-fit:cover; object-position:top center; display:block;" />
+                <div style="position:absolute; inset:auto 0 0 0; height:72px; background:linear-gradient(180deg, transparent 0%, #09203F 100%); pointer-events:none;"></div>
+              </div>
+              <div class="vg-clinic-aside-body" style="padding-top:12px;">
                 <div>
-                  <h3>Dr. S. Vijay Ganapathy</h3>
-                  <span style="color:var(--vg-gold-bright); font-size:0.86rem; font-weight:600;">Urologist &amp; Andrologist &middot; TNMC No. 85606</span>
+                  <h3 style="margin-bottom:2px;">Dr. S. Vijay Ganapathy</h3>
+                  <span style="color:var(--vg-gold-bright); font-size:0.86rem; font-weight:600; display:block;">Consultant Urologist &amp; Andrologist</span>
+                  <span class="vg-doc-tnmc-pill"><i class="fa fa-shield"></i> TNMC Reg. No. 85606</span>
                 </div>
                 <ul class="vg-clinic-meta-list">
                   <li><i class="icofont-ui-call"></i> <span><a href="tel:+917598198133">7598198133</a> / <a href="tel:+919444469179">9444469179</a></span></li>
+                  <li><i class="icofont-whatsapp"></i> <span><a href="https://wa.me/919444469194" target="_blank" rel="noopener">WhatsApp: 9444469194</a></span></li>
                   <li><i class="icofont-ui-message"></i> <a href="mailto:ganapu86@gmail.com">ganapu86@gmail.com</a></li>
-                  <li><i class="icofont-location-pin"></i> <span>#14B, First Cross Street, Perumal Raja Garden, Reddiyarapalayam, Puducherry – 605010</span></li>
+                  <li><i class="icofont-location-pin"></i> <span>#14B, First Cross Street, Perumal Raja Garden, Reddiyarapalayam, Puducherry &ndash; 605010</span></li>
                 </ul>
                 <div style="border-top:1px solid rgba(255,255,255,0.14); padding-top:14px;">
                   <strong style="display:block; color:var(--vg-gold-bright); font-size:0.86rem; margin-bottom:8px;">Consultation Hours</strong>
                   <ul class="vg-hours-list">
-                    <li>Monday – Friday <span>6:00 PM – 9:00 PM</span></li>
+                    <li>Monday &ndash; Friday <span>6:00 PM &ndash; 9:00 PM</span></li>
                     <li>Saturday &amp; Sunday <span>By Appointment</span></li>
                   </ul>
                 </div>
@@ -161,65 +191,279 @@
                   <li><a href="https://www.facebook.com/DrVGUrologist/" target="_blank" rel="noopener" aria-label="Facebook"><i class="icofont-facebook"></i></a></li>
                   <li><a href="https://www.instagram.com/dr.vgkidneystoneclinic/" target="_blank" rel="noopener" aria-label="Instagram"><i class="icofont-instagram"></i></a></li>
                   <li><a href="http://www.youtube.com/@dr.vgkidneystoneclinicpond235" target="_blank" rel="noopener" aria-label="YouTube"><i class="icofont-youtube"></i></a></li>
+                  <li><a href="https://wa.me/919444469194" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="icofont-whatsapp"></i></a></li>
                 </ul>
-                <a href="appointment.html" class="vg-btn vg-btn-gold" style="width:100%;">Book Consultation</a>
+                <a href="appointment.html" class="vg-btn vg-btn-gold" style="width:100%;"><i class="fa fa-calendar-check-o"></i> Book Consultation</a>
               </div>
             </div>
           </div>
 
-          <!-- Right Biography & Credentials -->
-          <div class="col-lg-8" data-fade="right">
-            <div class="vg-form-card" style="margin-bottom:24px;">
-              <span class="vg-eyebrow">Biography</span>
-              <h2 class="vg-serif" style="margin-bottom:14px;">Academic Journey &amp; Clinical Dedication</h2>
-              <p>
-                I am Dr. Vijay Ganapathy, a native of the French city of Pondicherry. After a memorable schooling in Petit Seminaire High School, I went on to study Medicine at Pondicherry Institute of Medical Sciences, Pondicherry University.
-              </p>
-              <p>
-                I furthered my education with a Master's in Surgery at Jawaharlal Institute of Postgraduate Medical Education and Research (JIPMER), Puducherry, India — graduating as the topper with a gold medal.
-              </p>
-              <p>
-                I completed my Urological Residency (MCh) at the Institute of Nephrourology, Bengaluru, a dedicated center of excellence performing 500–600 urological surgeries monthly across laparoscopy, endourology, and renal transplantation, and later completed my Andrology Fellowship sub-specialization at Singapore General Hospital and NUHS, Singapore.
-              </p>
-              <p style="margin-bottom:0;">
-                My research in Urodynamics earned the Urogynaecology Fellowship from the International Continence Society (ICS 2017) in Florence, Italy, supported by an ICMR travel grant, and I presented a randomized controlled study on T. Pregabalin's efficacy in stent removal at the World Congress of Endourology (Paris, 2018).
-              </p>
+          <!-- Right Biography & Academic Timeline -->
+          <div class="col-lg-8">
+            <div class="vg-doc-quote-card mb-4" data-fade="up">
+              <span class="vg-doc-quote-mark" aria-hidden="true">&ldquo;</span>
+              <div style="flex:1;">
+                <blockquote style="margin:0; font-family:var(--vg-font-display); font-size:clamp(1.06rem, 1.35vw, 1.22rem); font-style:italic; color:var(--vg-navy); line-height:1.55;">Every patient deserves clear answers, gentle minimally invasive treatment, and a recovery plan tailored to their life.</blockquote>
+                <cite style="display:block; margin-top:8px; font-style:normal; font-size:0.84rem; font-weight:700; color:var(--vg-teal);">&mdash; Dr. S. Vijay Ganapathy, MS (JIPMER), DNB, MCh (Urology)</cite>
+              </div>
+              <svg class="vg-doc-quote-art" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M22 14C14 14 9 21 9 30C9 40 15 47 22 47C26 47 28 43 28 38C28 34 25 32 25 29C25 26 28 24 28 20C28 16 25.5 14 22 14Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M42 14C50 14 55 21 55 30C55 40 49 47 42 47C38 47 36 43 36 38C36 34 39 32 39 29C39 26 36 24 36 20C36 16 38.5 14 42 14Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M26 34V54M38 34V54" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
             </div>
 
-            <div class="vg-form-card" style="margin-bottom:24px;">
-              <span class="vg-eyebrow">Education &amp; Fellowships</span>
-              <h3 style="margin-bottom:14px;">Verified Academic Credentials</h3>
-              <ul class="vg-check-list">
-                <li><i class="fa fa-graduation-cap"></i> <span><strong>MCh Urology (Gold Medalist)</strong> — Institute of NephroUrology, Bengaluru (RGUHS Gold Medal awarded by Vice President of India)</span></li>
-                <li><i class="fa fa-graduation-cap"></i> <span><strong>DNB General Surgery (Gold Medalist)</strong> — National Board of Examinations, New Delhi (Dr. B. Ramamurthi Gold Medal, 2014)</span></li>
-                <li><i class="fa fa-graduation-cap"></i> <span><strong>MS General Surgery (Gold Medalist)</strong> — JIPMER, Puducherry (Dr. S.C. Mitra &amp; Dr. S.B. Sen Gold Medals, 2013)</span></li>
-                <li><i class="fa fa-graduation-cap"></i> <span><strong>MBBS</strong> — Pondicherry Institute of Medical Sciences, Pondicherry University</span></li>
-                <li><i class="fa fa-globe"></i> <span><strong>Andrology &amp; Endourology Fellowship</strong> — Singapore General Hospital (SGH) &amp; NUHS, Singapore</span></li>
-                <li><i class="fa fa-globe"></i> <span><strong>Urogynaecology Fellowship</strong> — International Continence Society (ICS 2017), Florence, Italy</span></li>
+            <div class="vg-card mb-5" data-fade="up">
+              <span class="vg-eyebrow"><i class="fa fa-user-md"></i> Biography</span>
+              <h2 class="vg-h2 mb-3">A Dedicated Specialist in <span style="color:var(--vg-teal);">Minimally Invasive Urology</span></h2>
+              <p style="color:var(--vg-text-soft); margin-bottom:14px; line-height:1.75;">Dr. S. Vijay Ganapathy is a senior Consultant Urologist, Andrologist, and Kidney Stone Specialist practising in Puducherry. He completed his MBBS, MS (General Surgery) at JIPMER, DNB (Surgery), and MCh (Urology) as a Gold Medalist, followed by international fellowships in Endourology &amp; Andrology (Singapore) and Urogynaecology (Italy).</p>
+              <p style="color:var(--vg-text-soft); margin-bottom:22px; line-height:1.75;">With over a decade of clinical and surgical experience, he focuses on stitchless laser kidney stone removal (RIRS &amp; Mini-PCNL), prostate care, male infertility &amp; microsurgery, paediatric urology, and female urogynaecology.</p>
+              <div class="row g-3" data-fade-stagger>
+                <div class="col-sm-4" data-fade="up">
+                  <div class="vg-doc-stat-box">
+                    <span class="vg-doc-stat-ico"><i class="fa fa-calendar"></i></span>
+                    <div>
+                      <strong style="display:block; color:var(--vg-navy); font-size:0.98rem; line-height:1.15;">12+ Years</strong>
+                      <small style="color:var(--vg-muted); font-size:0.78rem; line-height:1.3; display:block;">Urology &amp; Surgical Experience</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-4" data-fade="up">
+                  <div class="vg-doc-stat-box">
+                    <span class="vg-doc-stat-ico"><i class="fa fa-trophy"></i></span>
+                    <div>
+                      <strong style="display:block; color:var(--vg-navy); font-size:0.98rem; line-height:1.15;">Gold Medalist</strong>
+                      <small style="color:var(--vg-muted); font-size:0.78rem; line-height:1.3; display:block;">MCh (Urology) Excellence</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-4" data-fade="up">
+                  <div class="vg-doc-stat-box">
+                    <span class="vg-doc-stat-ico"><i class="fa fa-globe"></i></span>
+                    <div>
+                      <strong style="display:block; color:var(--vg-navy); font-size:0.98rem; line-height:1.15;">Singapore &amp; Italy</strong>
+                      <small style="color:var(--vg-muted); font-size:0.78rem; line-height:1.3; display:block;">International Fellowships</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div data-fade="up">
+              <span class="vg-eyebrow"><i class="fa fa-graduation-cap"></i> Academic Journey</span>
+              <h2 class="vg-h2 mb-4">Education &amp; International Fellowships</h2>
+              <div class="vg-timeline" data-fade-stagger>
+                <div class="vg-timeline-item" data-fade="up">
+                  <div class="vg-doc-timeline-row">
+                    <span class="vg-doc-tl-ico"><i class="fa fa-graduation-cap"></i></span>
+                    <div>
+                      <span class="vg-doc-tl-label">Super-Specialty &middot; Gold Medal</span>
+                      <h4 style="color:var(--vg-teal); margin-bottom:4px;">MCh (Urology) &mdash; Gold Medalist</h4>
+                      <p style="margin:0; color:var(--vg-text-soft);">Awarded the Gold Medal for academic and surgical excellence in super-specialty urology training.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="vg-timeline-item" data-fade="up">
+                  <div class="vg-doc-timeline-row">
+                    <span class="vg-doc-tl-ico"><i class="fa fa-university"></i></span>
+                    <div>
+                      <span class="vg-doc-tl-label">Postgraduate &middot; JIPMER</span>
+                      <h4 style="margin-bottom:4px;">MS (General Surgery) &mdash; JIPMER, Puducherry</h4>
+                      <p style="margin:0; color:var(--vg-text-soft);">Postgraduate surgical training at one of India&rsquo;s premier Institutes of National Importance.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="vg-timeline-item" data-fade="up">
+                  <div class="vg-doc-timeline-row">
+                    <span class="vg-doc-tl-ico"><i class="fa fa-certificate"></i></span>
+                    <div>
+                      <span class="vg-doc-tl-label">National Board</span>
+                      <h4 style="margin-bottom:4px;">DNB (General Surgery)</h4>
+                      <p style="margin:0; color:var(--vg-text-soft);">Diplomate of National Board certification in General Surgery.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="vg-timeline-item" data-fade="up">
+                  <div class="vg-doc-timeline-row">
+                    <span class="vg-doc-tl-ico"><i class="fa fa-globe"></i></span>
+                    <div>
+                      <span class="vg-doc-tl-label">Global Fellowships</span>
+                      <h4 style="color:var(--vg-teal); margin-bottom:4px;">International Fellowships (Singapore &amp; Italy)</h4>
+                      <p style="margin:0; color:var(--vg-text-soft);">USI Endourology &amp; Andrology Fellow (Singapore) and ICS Urogynaecology Fellow (Italy).</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Full-Width Core Areas of Expertise Band -->
+    <section class="vg-section vg-doc-focus-band">
+      <div class="container">
+        <div class="text-center mb-5" data-fade="up">
+          <span class="vg-eyebrow"><i class="fa fa-medkit"></i> Clinical Focus</span>
+          <h2 class="vg-h2">Core Areas of <span style="color:var(--vg-teal);">Expertise</span></h2>
+          <p style="color:var(--vg-text-soft); max-width:620px; margin:8px auto 0;">Comprehensive, evidence-based urological care using modern laser and minimally invasive techniques.</p>
+        </div>
+        <div class="vg-doc-exp-grid" data-fade-stagger>
+          <a href="kidny.html" class="vg-doc-exp-card text-decoration-none" data-fade="up">
+            <div>
+              <div class="vg-doc-exp-head">
+                <span class="vg-doc-exp-ico-teal"><i class="fa fa-bolt"></i></span>
+                <h4>Laser Kidney Stone Surgery</h4>
+              </div>
+              <small>Flexible RIRS, URSL, and Mini-PCNL for scarless, fast-recovery stone clearance.</small>
+            </div>
+            <span class="vg-doc-exp-more">Explore Treatment <i class="fa fa-arrow-right"></i></span>
+          </a>
+          <a href="prostate.html" class="vg-doc-exp-card text-decoration-none" data-fade="up">
+            <div>
+              <div class="vg-doc-exp-head">
+                <span class="vg-doc-exp-ico-teal"><i class="fa fa-heartbeat"></i></span>
+                <h4>Prostate &amp; BPH Care</h4>
+              </div>
+              <small>Medical and endoscopic TURP / laser prostatectomy for urinary flow relief.</small>
+            </div>
+            <span class="vg-doc-exp-more">Explore Treatment <i class="fa fa-arrow-right"></i></span>
+          </a>
+          <a href="ANDROLOGY.html" class="vg-doc-exp-card text-decoration-none" data-fade="up">
+            <div>
+              <div class="vg-doc-exp-head">
+                <span class="vg-doc-exp-ico-teal"><i class="fa fa-mars"></i></span>
+                <h4>Andrology &amp; Male Fertility</h4>
+              </div>
+              <small>Microsurgical varicocelectomy, erectile dysfunction, and fertility evaluation.</small>
+            </div>
+            <span class="vg-doc-exp-more">Explore Treatment <i class="fa fa-arrow-right"></i></span>
+          </a>
+          <a href="pedia.html" class="vg-doc-exp-card text-decoration-none" data-fade="up">
+            <div>
+              <div class="vg-doc-exp-head">
+                <span class="vg-doc-exp-ico-teal"><i class="fa fa-child"></i></span>
+                <h4>Paediatric Urology</h4>
+              </div>
+              <small>Gentle corrective care for congenital hydronephrosis, VUR, and hypospadias.</small>
+            </div>
+            <span class="vg-doc-exp-more">Explore Treatment <i class="fa fa-arrow-right"></i></span>
+          </a>
+          <a href="urage.html" class="vg-doc-exp-card text-decoration-none" data-fade="up">
+            <div>
+              <div class="vg-doc-exp-head">
+                <span class="vg-doc-exp-ico-teal"><i class="fa fa-female"></i></span>
+                <h4>Urogynaecology</h4>
+              </div>
+              <small>Evidence-based management for urinary incontinence and pelvic floor disorders.</small>
+            </div>
+            <span class="vg-doc-exp-more">Explore Treatment <i class="fa fa-arrow-right"></i></span>
+          </a>
+          <a href="service.html" class="vg-doc-exp-card text-decoration-none" data-fade="up">
+            <div>
+              <div class="vg-doc-exp-head">
+                <span class="vg-doc-exp-ico-teal"><i class="fa fa-stethoscope"></i></span>
+                <h4>Laparoscopic Urology</h4>
+              </div>
+              <small>Keyhole surgical procedures for renal cysts, PUJ obstruction, and uro-oncology.</small>
+            </div>
+            <span class="vg-doc-exp-more">Explore Treatment <i class="fa fa-arrow-right"></i></span>
+          </a>
+        </div>
+
+        <!-- 3-Step Patient Care Philosophy Strip -->
+        <div class="row g-3 mt-4" data-fade-stagger>
+          <div class="col-md-4" data-fade="up">
+            <div class="vg-doc-step-card">
+              <span class="vg-doc-step-num">01</span>
+              <div>
+                <strong style="display:block; color:var(--vg-navy); font-size:0.95rem; margin-bottom:4px;">Focused Diagnostic Evaluation</strong>
+                <span style="font-size:0.82rem; color:var(--vg-text-soft); line-height:1.5; display:block;">Detailed review of scans, reports, and symptoms in English or Tamil so every concern is clearly understood.</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4" data-fade="up">
+            <div class="vg-doc-step-card">
+              <span class="vg-doc-step-num">02</span>
+              <div>
+                <strong style="display:block; color:var(--vg-navy); font-size:0.95rem; margin-bottom:4px;">Minimally Invasive Treatment</strong>
+                <span style="font-size:0.82rem; color:var(--vg-text-soft); line-height:1.5; display:block;">Conservative medical therapy first, and scarless laser / endoscopic procedures (RIRS, URSL, Mini-PCNL) when needed.</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4" data-fade="up">
+            <div class="vg-doc-step-card">
+              <span class="vg-doc-step-num">03</span>
+              <div>
+                <strong style="display:block; color:var(--vg-navy); font-size:0.95rem; margin-bottom:4px;">Dedicated Recovery &amp; Prevention</strong>
+                <span style="font-size:0.82rem; color:var(--vg-text-soft); line-height:1.5; display:block;">Personalised follow-up guidance on hydration, nutrition, and long-term stone recurrence prevention.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Full-Width Milestones & Professional Affiliations -->
+    <section class="vg-section pb-4">
+      <div class="container">
+        <div class="row g-4 align-items-stretch">
+          <div class="col-lg-7" data-fade="left">
+            <div class="row g-3 h-100" data-fade-stagger>
+              <div class="col-md-6" data-fade="up">
+                <div class="vg-gallery-card h-100">
+                  <div style="overflow:hidden;">
+                    <img src="President pic.jpg" alt="Dr. S. Vijay Ganapathy with Urological Society leadership" style="width:100%; height:220px; object-fit:cover; object-position:center top; display:block;" />
+                  </div>
+                  <div class="vg-gallery-caption">
+                    <h4>Urological Society Leadership</h4>
+                    <p>Active contributor to national and regional urology academic forums.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6" data-fade="up">
+                <div class="vg-gallery-card h-100">
+                  <div style="overflow:hidden;">
+                    <img src="PCNL 3.jpg" alt="Advanced Endourology &amp; PCNL Surgical Suite" style="width:100%; height:220px; object-fit:cover; object-position:center; display:block;" />
+                  </div>
+                  <div class="vg-gallery-caption">
+                    <h4>Endourology &amp; Stone Suite</h4>
+                    <p>Modern laser and Mini-PCNL equipment for precision kidney stone surgery.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5" data-fade="right">
+            <div class="vg-card h-100 d-flex flex-column justify-content-center" style="border-top:3px solid var(--vg-gold-bright);">
+              <span class="vg-eyebrow" style="align-self:flex-start;"><i class="fa fa-users"></i> Affiliations</span>
+              <h2 class="vg-h2 mb-3">Memberships &amp; Roles</h2>
+              <ul class="vg-check-list mb-0">
+                <li><i class="icofont-check-circled"></i> Member, Urological Society of India (USI)</li>
+                <li><i class="icofont-check-circled"></i> Member, International Continence Society (ICS)</li>
+                <li><i class="icofont-check-circled"></i> Consultant Urologist &amp; Andrologist, Dr. VG Kidney Stone Clinic, Puducherry</li>
+                <li><i class="icofont-check-circled"></i> Tamil Nadu Medical Council Reg. No. 85606</li>
               </ul>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            <div class="vg-form-card" style="margin-bottom:24px;">
-              <span class="vg-eyebrow">Clinical Focus</span>
-              <h3 style="margin-bottom:14px;">Field of Expertise &amp; Research</h3>
-              <p>
-                As a practicing urologist and andrologist, my primary areas of care are minimally invasive management for kidney stone diseases through scarless and keyhole procedures (ESWL, PCNL, Mini-Perc, RIRS, URSL), prostate laser care, and vascular access for kidney failure patients.
-              </p>
-              <p style="margin-bottom:0;">
-                I am deeply passionate about Men's Health Management—breaking cultural taboos around male fertility, sexual wellness, and preventive urology so every patient receives dignified, confidential, evidence-based care.
-              </p>
-            </div>
-
-            <div class="vg-form-card">
-              <span class="vg-eyebrow">Career Appointments</span>
-              <h3 style="margin-bottom:14px;">Professional Experience</h3>
-              <ul class="vg-check-list">
-                <li><i class="fa fa-hospital-o"></i> <span>Consultant Urologist &amp; Andrologist — Dr. VG Kidney Stone Clinic, Reddiyarapalayam, Puducherry</span></li>
-                <li><i class="fa fa-hospital-o"></i> <span>Former Andrology &amp; Endourology Fellow — Singapore General Hospital &amp; NUHS, Singapore</span></li>
-                <li><i class="fa fa-hospital-o"></i> <span>MCh Urology Resident &amp; Surgical Registrar — Institute of Nephrourology, Bengaluru, India</span></li>
-                <li><i class="fa fa-hospital-o"></i> <span>Senior Resident, Department of Urology — Indira Gandhi Government General Hospital &amp; PGI, Puducherry</span></li>
-              </ul>
-            </div>
+    <!-- Exact Emergency Consultation Banner (matching index.html) -->
+    <section class="vg-section-sm">
+      <div class="container">
+        <div class="vg-cta-banner" data-fade="up">
+          <div>
+            <span class="vg-eyebrow vg-eyebrow-dark"><i class="fa fa-phone"></i> Urgent Care Support</span>
+            <h2>Need Urgent Urological Care? Call 9444469179</h2>
+            <p>
+              Experiencing severe kidney stone pain, blood in urine, or acute urinary difficulty? Reach our clinic immediately for prompt medical guidance and priority scheduling.
+            </p>
+          </div>
+          <div class="vg-cta-actions">
+            <a href="tel:+919444469179" class="vg-btn vg-btn-gold"><i class="fa fa-phone"></i> Call Now</a>
+            <a href="contact.html" class="vg-btn vg-btn-ghost-light">Contact Desk <i class="fa fa-arrow-right"></i></a>
           </div>
         </div>
       </div>
