@@ -685,76 +685,268 @@
       }
     });
 
-    /* 10. Unified Appointment WhatsApp Booking Forms */
+    /* 10. Unified Appointment WhatsApp Booking Forms (with Interactive Slot & Chip Selectors) */
     document.querySelectorAll(".vg-appointment-form").forEach(function (form) {
+      var dateInput = form.querySelector('[name="date"]');
+      if (dateInput) {
+        var today = new Date().toISOString().split("T")[0];
+        dateInput.setAttribute("min", today);
+        if (!dateInput.value) dateInput.value = today;
+      }
+
+      function bindSelectorGroup(btnSelector, inputName) {
+        var btns = form.querySelectorAll(btnSelector);
+        var hiddenInput = form.querySelector('[name="' + inputName + '"]');
+        if (!btns.length || !hiddenInput) return;
+        btns.forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            btns.forEach(function (b) {
+              b.classList.remove("is-active");
+              b.setAttribute("aria-pressed", "false");
+            });
+            btn.classList.add("is-active");
+            btn.setAttribute("aria-pressed", "true");
+            hiddenInput.value = btn.getAttribute("data-value") || btn.textContent.trim();
+          });
+        });
+      }
+
+      bindSelectorGroup(".vg-choice-btn[data-group='visittype']", "visittype");
+      bindSelectorGroup(".vg-chip-btn[data-group='department']", "department");
+      bindSelectorGroup(".vg-slot-btn[data-group='timeslot']", "timeslot");
+
       form.addEventListener("submit", function (e) {
         e.preventDefault();
         var status = form.querySelector(".vg-form-status");
-        var name = (form.querySelector('[name="name"]') || {}).value || "";
-        var email = (form.querySelector('[name="email"]') || {}).value || "";
-        var phone = (form.querySelector('[name="phone"]') || {}).value || "";
-        var department = (form.querySelector('[name="department"]') || {}).value || "Urology";
-        var doctor = (form.querySelector('[name="doctor"]') || {}).value || "Dr. Vijay Ganapathy";
-        var date = (form.querySelector('[name="date"]') || {}).value || "";
+        var nameEl = form.querySelector('[name="name"]');
+        var emailEl = form.querySelector('[name="email"]');
+        var phoneEl = form.querySelector('[name="phone"]');
+        var phoneGroup = form.querySelector("#app-phone-group");
+        var nameErr = form.querySelector("#app-name-err");
+        var phoneErr = form.querySelector("#app-phone-err");
+        var emailErr = form.querySelector("#app-email-err");
+
+        var name = (nameEl || {}).value || "";
+        var email = (emailEl || {}).value || "";
+        var phone = (phoneEl || {}).value || "";
+        var visitType = (form.querySelector('[name="visittype"]') || {}).value || "New Consultation";
+        var department = (form.querySelector('[name="department"]') || {}).value || "Kidney Stone (RIRS / PCNL)";
+        var timeslot = (form.querySelector('[name="timeslot"]') || {}).value || "6:00 PM – 7:00 PM";
+        var doctor = (form.querySelector('[name="doctor"]') || {}).value || "Dr. S. Vijay Ganapathy";
+        var date = (dateInput || {}).value || "Flexible";
         var message = (form.querySelector('[name="message"]') || {}).value || "";
 
-        if (!name.trim() || !phone.trim()) {
+        var valid = true;
+        var firstBad = null;
+
+        if (nameErr) { nameErr.textContent = ""; nameErr.classList.remove("is-visible"); }
+        if (phoneErr) { phoneErr.textContent = ""; phoneErr.classList.remove("is-visible"); }
+        if (emailErr) { emailErr.textContent = ""; emailErr.classList.remove("is-visible"); }
+        if (nameEl) nameEl.classList.remove("is-invalid");
+        if (phoneGroup) phoneGroup.classList.remove("is-invalid");
+        if (phoneEl) phoneEl.classList.remove("is-invalid");
+        if (emailEl) emailEl.classList.remove("is-invalid");
+
+        if (name.trim().length < 3) {
+          valid = false;
+          if (nameEl) { nameEl.classList.add("is-invalid"); firstBad = firstBad || nameEl; }
+          if (nameErr) { nameErr.textContent = "Please enter patient full name (at least 3 characters)."; nameErr.classList.add("is-visible"); }
+        }
+
+        if (!/^\d{10}$/.test(phone.trim())) {
+          valid = false;
+          if (phoneGroup) phoneGroup.classList.add("is-invalid");
+          if (phoneEl) { phoneEl.classList.add("is-invalid"); firstBad = firstBad || phoneEl; }
+          if (phoneErr) { phoneErr.textContent = "Please enter an exact 10-digit mobile number after +91."; phoneErr.classList.add("is-visible"); }
+        }
+
+        if (email.trim() && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email.trim())) {
+          valid = false;
+          if (emailEl) { emailEl.classList.add("is-invalid"); firstBad = firstBad || emailEl; }
+          if (emailErr) { emailErr.textContent = "Please enter a valid email address."; emailErr.classList.add("is-visible"); }
+        }
+
+        if (!valid) {
           if (status) {
             status.className = "vg-form-status is-visible is-error";
-            status.textContent = "Please enter your full name and contact phone number.";
+            status.textContent = "Please complete the required patient details above to confirm your slot.";
           }
+          if (firstBad) firstBad.focus();
           return;
         }
 
         var text =
           "Appointment Request - Dr. VG Kidney Stone Clinic\n" +
-          "Name: " + name.trim() + "\n" +
-          "Email: " + (email.trim() || "Not provided") + "\n" +
-          "Phone: " + phone.trim() + "\n" +
-          "Department: " + department + "\n" +
+          "Visit Type: " + visitType + "\n" +
+          "Specialty: " + department + "\n" +
           "Doctor: " + doctor + "\n" +
           "Preferred Date: " + (date.trim() || "Flexible") + "\n" +
+          "Time Slot: " + timeslot + "\n" +
+          "Patient Name: " + name.trim() + "\n" +
+          "Phone: +91 " + phone.trim() + "\n" +
+          "Email: " + (email.trim() || "Not provided") + "\n" +
           "Notes: " + (message.trim() || "General Consultation");
 
         var waUrl = "https://wa.me/919444469194?text=" + encodeURIComponent(text);
 
         if (status) {
           status.className = "vg-form-status is-visible is-success";
-          status.textContent = "Opening WhatsApp to confirm your appointment with Dr. VG Kidney Stone Clinic...";
+          status.innerHTML =
+            '<i class="fa fa-check-circle" aria-hidden="true"></i> Slot request prepared for <strong>' +
+            visitType +
+            " (" +
+            timeslot +
+            ")</strong>. Opening WhatsApp to confirm with Dr. VG Kidney Stone Clinic...";
         }
         window.open(waUrl, "_blank", "noopener,noreferrer");
       });
     });
 
-    /* 11. Contact Page WhatsApp Form */
+    /* 11. Contact Page Validated Inquiry Form */
     var contactForm = document.getElementById("vg-contact-form");
     if (contactForm) {
+      var nameInput = document.getElementById("cnt-name");
+      var emailInput = document.getElementById("cnt-email");
+      var phoneInput = document.getElementById("cnt-phone");
+      var phoneGroup = document.getElementById("cnt-phone-group");
+      var subjectInput = document.getElementById("cnt-subj");
+      var messageInput = document.getElementById("cnt-msg");
+      var statusBox = contactForm.querySelector(".vg-form-status");
+
+      var validators = {
+        name: function (val) {
+          var v = val.trim();
+          if (!v) return "Full name is required.";
+          if (v.length < 3) return "Full name must be at least 3 characters.";
+          return "";
+        },
+        email: function (val) {
+          var v = val.trim();
+          if (!v) return "Email address is required.";
+          if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)) {
+            return "Please enter a valid email address.";
+          }
+          return "";
+        },
+        phone: function (val) {
+          var v = val.trim();
+          if (!v) return "Phone number is required.";
+          if (!/^\d+$/.test(v)) return "Phone number must contain digits only (0–9).";
+          if (v.length !== 10) return "Please enter an exact 10-digit mobile number after +91.";
+          return "";
+        },
+        subject: function (val) {
+          if (!val.trim()) return "Subject is required.";
+          return "";
+        },
+        message: function (val) {
+          var v = val.trim();
+          if (!v) return "Message is required.";
+          if (v.length < 10) return "Message must be at least 10 characters long.";
+          return "";
+        }
+      };
+
+      var fieldMap = [
+        { key: "name", el: nameInput, wrap: nameInput, errEl: document.getElementById("cnt-name-err") },
+        { key: "email", el: emailInput, wrap: emailInput, errEl: document.getElementById("cnt-email-err") },
+        { key: "phone", el: phoneInput, wrap: phoneGroup || phoneInput, errEl: document.getElementById("cnt-phone-err") },
+        { key: "subject", el: subjectInput, wrap: subjectInput, errEl: document.getElementById("cnt-subj-err") },
+        { key: "message", el: messageInput, wrap: messageInput, errEl: document.getElementById("cnt-msg-err") }
+      ];
+
+      function validateOne(item) {
+        if (!item.el) return true;
+        var errorMsg = validators[item.key](item.el.value);
+        if (errorMsg) {
+          item.el.setAttribute("aria-invalid", "true");
+          if (item.wrap) {
+            item.wrap.classList.add("is-invalid");
+            item.wrap.classList.remove("is-valid");
+          }
+          if (item.errEl) {
+            item.errEl.textContent = errorMsg;
+            item.errEl.classList.add("is-visible");
+          }
+          return false;
+        } else {
+          item.el.setAttribute("aria-invalid", "false");
+          if (item.wrap) {
+            item.wrap.classList.remove("is-invalid");
+            item.wrap.classList.add("is-valid");
+          }
+          if (item.errEl) {
+            item.errEl.textContent = "";
+            item.errEl.classList.remove("is-visible");
+          }
+          return true;
+        }
+      }
+
+      fieldMap.forEach(function (item) {
+        if (!item.el) return;
+        item.el.setAttribute("data-touched", "0");
+        item.el.addEventListener("blur", function () {
+          item.el.setAttribute("data-touched", "1");
+          validateOne(item);
+        });
+        item.el.addEventListener("input", function () {
+          if (item.el.getAttribute("data-touched") === "1" || (item.wrap && item.wrap.classList.contains("is-invalid"))) {
+            validateOne(item);
+          }
+        });
+      });
+
       contactForm.addEventListener("submit", function (e) {
         e.preventDefault();
-        var status = contactForm.querySelector(".vg-form-status");
-        var name = contactForm.querySelector('[name="name"]').value.trim();
-        var email = contactForm.querySelector('[name="email"]').value.trim();
-        var phone = contactForm.querySelector('[name="phone"]').value.trim();
-        var subject = contactForm.querySelector('[name="subject"]').value.trim();
-        var message = contactForm.querySelector('[name="message"]').value.trim();
-        var newsletterOpt = contactForm.querySelector('[name="newsletter"]');
-        var newsletter = newsletterOpt && newsletterOpt.checked ? "Yes" : "No";
+        var firstInvalid = null;
+        var allValid = true;
 
-        var text =
-          "New Contact Inquiry - Dr. VG Kidney Stone Clinic\n" +
-          "Name: " + name + "\n" +
-          "Email: " + email + "\n" +
-          "Phone: " + phone + "\n" +
-          "Subject: " + subject + "\n" +
-          "Message: " + message + "\n" +
-          "Newsletter Subscription: " + newsletter;
+        fieldMap.forEach(function (item) {
+          if (item.el) item.el.setAttribute("data-touched", "1");
+          var ok = validateOne(item);
+          if (!ok) {
+            allValid = false;
+            if (!firstInvalid && item.el) firstInvalid = item.el;
+          }
+        });
 
-        var waUrl = "https://wa.me/919444469179?text=" + encodeURIComponent(text);
-        if (status) {
-          status.className = "vg-form-status is-visible is-success";
-          status.textContent = "Redirecting to WhatsApp clinic support desk...";
+        if (!allValid) {
+          if (statusBox) {
+            statusBox.className = "vg-form-status is-visible is-error";
+            statusBox.textContent = "Please correct the highlighted fields below before sending your message.";
+          }
+          if (firstInvalid) firstInvalid.focus();
+          return;
         }
-        window.open(waUrl, "_blank", "noopener,noreferrer");
+
+        var submittedName = nameInput.value.trim();
+        var submittedPhone = "+91 " + phoneInput.value.trim();
+
+        if (statusBox) {
+          statusBox.className = "vg-form-status is-visible is-success";
+          statusBox.innerHTML =
+            '<i class="fa fa-check-circle" aria-hidden="true"></i> Thank you, <strong>' +
+            submittedName.replace(/[<>&"]/g, "") +
+            "</strong>! Your message has been received. Our clinic desk will contact you on <strong>" +
+            submittedPhone +
+            "</strong> or your email shortly.";
+        }
+
+        contactForm.reset();
+        fieldMap.forEach(function (item) {
+          if (item.el) {
+            item.el.setAttribute("data-touched", "0");
+            item.el.setAttribute("aria-invalid", "false");
+          }
+          if (item.wrap) {
+            item.wrap.classList.remove("is-valid", "is-invalid");
+          }
+          if (item.errEl) {
+            item.errEl.textContent = "";
+            item.errEl.classList.remove("is-visible");
+          }
+        });
       });
     }
 

@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="css/bootstrap.min.css" />
   <link rel="stylesheet" href="css/font-awesome.min.css" />
   <link rel="stylesheet" href="css/icofont.css" />
-  <link rel="stylesheet" href="css/vg-theme.css" />
+  <link rel="stylesheet" href="css/vg-theme.css?v=5" />
 </head>
 <body>
   <div class="vg-preloader" aria-hidden="true"><div class="vg-preloader-ring"></div></div>
@@ -64,7 +64,6 @@
                 </ul>
               </li>
               <li><a href="about.html">About Us</a></li>
-              <li><a href="faq.html">FAQ</a></li>
               <li class="active"><a href="contact.html">Contact</a></li>
             </ul>
           </nav>
@@ -109,7 +108,6 @@
           </ul>
         </li>
         <li><a href="about.html">About Clinic</a></li>
-        <li><a href="faq.html">Urology FAQ</a></li>
         <li><a href="contact.html">Contact Us</a></li>
       </ul>
       <div style="margin-top:auto; display:grid; gap:10px;">
@@ -120,109 +118,232 @@
   </div>
 
   <main>
-    <section class="vg-page-hero">
-      <div class="container vg-fade-hero">
-        <span class="vg-eyebrow vg-eyebrow-dark">Visit &amp; Connect</span>
-        <h1>Contact Us</h1>
-        <p>Reach Dr. VG Kidney Stone Clinic in Reddiyarapalayam, Puducherry for consultations, directions, or follow-up questions.</p>
-        <ul class="vg-breadcrumb">
-          <li><a href="index.html">Home</a></li>
-          <li><i class="icofont-simple-right"></i></li>
-          <li>Contact Us</li>
-        </ul>
+    <!-- Clean Contact Banner with Clinic Consultation Room Visual -->
+    <section class="vg-contact-banner">
+      <div class="vg-doc-banner-scrim"></div>
+      <div class="container position-relative" style="z-index:2;">
+        <div class="vg-doc-hero-copy vg-fade-hero">
+          <span class="vg-eyebrow vg-eyebrow-dark"><i class="fa fa-map-marker"></i> Puducherry Clinic &middot; TNMC Reg. No. 85606</span>
+          <h1>Contact <span class="vg-doc-name-gold">Dr. VG Clinic <svg class="vg-doc-swoop" viewBox="0 0 280 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M4 13C72 4 190 2 276 11" stroke="url(#vgContactSwoop)" stroke-width="3.2" stroke-linecap="round"/><defs><linearGradient id="vgContactSwoop" x1="4" y1="13" x2="276" y2="11" gradientUnits="userSpaceOnUse"><stop stop-color="#f2c94c"/><stop offset="1" stop-color="#d4a017" stop-opacity="0.35"/></linearGradient></defs></svg></span></h1>
+          <p>Reach Dr. VG Kidney Stone Clinic in Reddiyarapalayam, Puducherry for directions, general inquiries, or follow-up questions.</p>
+          <ul class="vg-breadcrumb">
+            <li><a href="index.html">Home</a></li>
+            <li><i class="icofont-simple-right"></i></li>
+            <li>Contact Us</li>
+          </ul>
+        </div>
       </div>
     </section>
 
-    <section class="vg-section vg-section-alabaster">
+    <!-- 4 Quick Contact Highlight Cards -->
+    <section class="pb-2">
       <div class="container">
-        <div class="vg-appointment-grid" style="margin-bottom:44px;">
-          <div class="vg-form-card" style="padding:14px; display:flex; flex-direction:column;" data-fade="left">
-            <div style="border-radius:14px; overflow:hidden; flex:1; min-height:380px;">
-              <iframe
-                title="Dr. VG Kidney Stone Clinic Map Location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3710.471976345041!2d79.7932203859091!3d11.931523638479266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5361cdc6884f6b%3A0x48338fc022770f7f!2sDR%20Vijayganapathy%20Clinic!5e1!3m2!1sen!2sin!4v1750855383499!5m2!1sen!2sin"
-                style="border:0; width:100%; height:100%; min-height:380px; display:block;"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </div>
-          </div>
-
-          <div class="vg-form-card" data-fade="right">
-            <span class="vg-eyebrow">Send an Inquiry</span>
-            <h2 class="vg-serif" style="margin-bottom:8px;">Contact With Us</h2>
-            <p style="color:var(--vg-muted); margin-bottom:22px;">If you have any questions about symptoms, diagnostic tests, or clinic hours, please feel free to reach out.</p>
-            <form id="vg-contact-form" novalidate>
-              <div class="vg-form-grid">
-                <div class="vg-field">
-                  <label for="cnt-name">Name *</label>
-                  <input id="cnt-name" name="name" type="text" class="vg-input" placeholder="Full Name" required />
-                </div>
-                <div class="vg-field">
-                  <label for="cnt-email">Email *</label>
-                  <input id="cnt-email" name="email" type="email" class="vg-input" placeholder="Email Address" required />
-                </div>
-                <div class="vg-field">
-                  <label for="cnt-phone">Phone *</label>
-                  <input id="cnt-phone" name="phone" type="tel" class="vg-input" placeholder="Phone Number" required />
-                </div>
-                <div class="vg-field">
-                  <label for="cnt-subj">Subject *</label>
-                  <input id="cnt-subj" name="subject" type="text" class="vg-input" placeholder="Inquiry Subject" required />
-                </div>
-                <div class="vg-field is-full">
-                  <label for="cnt-msg">Your Message *</label>
-                  <textarea id="cnt-msg" name="message" class="vg-textarea" placeholder="Write your message here..." required></textarea>
-                </div>
-                <div class="vg-field is-full">
-                  <label style="display:flex; align-items:center; gap:8px; cursor:pointer; font-weight:500;">
-                    <input name="newsletter" type="checkbox" style="width:18px; height:18px; accent-color:var(--vg-crimson);" />
-                    Do you want to subscribe to clinic health updates?
-                  </label>
-                </div>
-              </div>
-              <div style="margin-top:20px;">
-                <button type="submit" class="vg-btn vg-btn-primary"><i class="fa fa-whatsapp"></i> Send via WhatsApp</button>
-              </div>
-              <div class="vg-form-status" role="status" aria-live="polite"></div>
-            </form>
+        <div class="vg-doc-hero-badges" data-fade-stagger>
+          <a href="tel:+919444469179" class="vg-doc-badge-card text-decoration-none" data-fade="up">
+            <div class="vg-doc-badge-ico"><i class="fa fa-phone"></i></div>
+            <div><strong>Call Clinic Desk</strong><span>9444469179 / 7598198133</span></div>
+          </a>
+          <a href="https://wa.me/919444469194" target="_blank" rel="noopener" class="vg-doc-badge-card text-decoration-none" data-fade="up">
+            <div class="vg-doc-badge-ico"><i class="fa fa-whatsapp"></i></div>
+            <div><strong>WhatsApp Support</strong><span>+91 9444469194</span></div>
+          </a>
+          <a href="mailto:ganapu86@gmail.com" class="vg-doc-badge-card text-decoration-none" data-fade="up">
+            <div class="vg-doc-badge-ico"><i class="fa fa-envelope"></i></div>
+            <div><strong>Email Inquiries</strong><span>ganapu86@gmail.com</span></div>
+          </a>
+          <div class="vg-doc-badge-card" data-fade="up">
+            <div class="vg-doc-badge-ico"><i class="fa fa-clock-o"></i></div>
+            <div><strong>Consultation Hours</strong><span>Mon&ndash;Fri: 6:00 PM &ndash; 9:00 PM</span></div>
           </div>
         </div>
+      </div>
+    </section>
 
-        <!-- 3 Contact Info Cards -->
-        <div class="vg-pillars-grid">
-          <div class="vg-quick-card is-accent" data-fade="up">
-            <div>
-              <span class="vg-quick-icon"><i class="icofont icofont-ui-call"></i></span>
-              <span class="vg-kicker">Direct Desk</span>
-              <h3>Phone &amp; Email</h3>
-              <p>
-                <a href="tel:+919444469179" style="color:#fff;">9444469179</a> &middot; <a href="tel:+919444469194" style="color:#fff;">9444469194</a><br />
-                <a href="mailto:ganapu86@gmail.com" style="color:var(--vg-gold-bright);">ganapu86@gmail.com</a>
-              </p>
+    <!-- Main Contact Section: Interactive Map & Light Clinic Card (Left) + Inquiry Form (Right) -->
+    <section class="vg-section vg-section-alabaster" aria-labelledby="contact-form-heading">
+      <div class="container">
+        <div class="row g-4 align-items-stretch">
+          <!-- Left Column: Interactive Map First + Clean Light Clinic Details -->
+          <div class="col-lg-5 d-flex flex-column gap-4" data-fade="left">
+            <div class="vg-form-card" style="padding:14px;">
+              <div style="border-radius:14px; overflow:hidden; height:270px;">
+                <iframe
+                  title="Dr. VG Kidney Stone Clinic Map Location"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3710.471976345041!2d79.7932203859091!3d11.931523638479266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5361cdc6884f6b%3A0x48338fc022770f7f!2sDR%20Vijayganapathy%20Clinic!5e1!3m2!1sen!2sin!4v1750855383499!5m2!1sen!2sin"
+                  style="border:0; width:100%; height:100%; display:block;"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+              <div class="d-flex align-items-center justify-content-between px-2 pt-2">
+                <span style="font-size:0.82rem; color:var(--vg-muted);"><i class="fa fa-map-marker" style="color:var(--vg-teal);" aria-hidden="true"></i> Reddiyarapalayam, Puducherry</span>
+                <a href="https://maps.app.goo.gl/" target="_blank" rel="noopener" style="font-size:0.82rem; font-weight:700; color:var(--vg-teal);">Open in Maps <i class="fa fa-external-link" aria-hidden="true"></i></a>
+              </div>
             </div>
+
+            <aside class="vg-card flex-grow-1" style="border-left:4px solid var(--vg-teal);" aria-label="Clinic Contact Information">
+              <span class="vg-eyebrow"><i class="fa fa-hospital-o"></i> Clinic Details</span>
+              <h2 style="font-family:var(--vg-font-display); font-size:1.38rem; color:var(--vg-navy); margin-bottom:6px;">Dr. VG Kidney Stone Clinic</h2>
+              <p style="color:var(--vg-text-soft); font-size:0.88rem; line-height:1.6; margin-bottom:16px;">Led by Dr. S. Vijay Ganapathy (MS JIPMER, DNB, MCh Urology &mdash; Gold Medalist), providing compassionate, minimally invasive kidney stone, prostate, and complete urology care in Puducherry.</p>
+
+              <div class="d-flex flex-column gap-3" style="font-size:0.9rem;">
+                <div class="d-flex align-items-start gap-3">
+                  <span class="vg-doc-badge-ico" style="width:36px; height:36px;" aria-hidden="true"><i class="fa fa-map-marker"></i></span>
+                  <div>
+                    <strong style="display:block; color:var(--vg-navy); font-size:0.82rem;">Location</strong>
+                    <span style="color:var(--vg-text-soft);">#14B, First Cross Street, Perumal Raja Garden, Reddiyarapalayam, Puducherry &ndash; 605010</span>
+                  </div>
+                </div>
+                <div class="d-flex align-items-start gap-3">
+                  <span class="vg-doc-badge-ico" style="width:36px; height:36px;" aria-hidden="true"><i class="fa fa-phone"></i></span>
+                  <div>
+                    <strong style="display:block; color:var(--vg-navy); font-size:0.82rem;">Phone Number</strong>
+                    <a href="tel:+919444469179" style="color:var(--vg-teal); font-weight:600;">+91 9444469179</a> &middot; <a href="tel:+917598198133" style="color:var(--vg-teal); font-weight:600;">+91 7598198133</a>
+                  </div>
+                </div>
+                <div class="d-flex align-items-start gap-3">
+                  <span class="vg-doc-badge-ico" style="width:36px; height:36px;" aria-hidden="true"><i class="fa fa-whatsapp"></i></span>
+                  <div>
+                    <strong style="display:block; color:var(--vg-navy); font-size:0.82rem;">WhatsApp Number</strong>
+                    <a href="https://wa.me/919444469194" target="_blank" rel="noopener" style="color:var(--vg-teal); font-weight:600;">+91 9444469194 (Chat on WhatsApp)</a>
+                  </div>
+                </div>
+                <div class="d-flex align-items-start gap-3">
+                  <span class="vg-doc-badge-ico" style="width:36px; height:36px;" aria-hidden="true"><i class="fa fa-envelope"></i></span>
+                  <div>
+                    <strong style="display:block; color:var(--vg-navy); font-size:0.82rem;">Email Address</strong>
+                    <a href="mailto:ganapu86@gmail.com" style="color:var(--vg-teal); font-weight:600;">ganapu86@gmail.com</a>
+                  </div>
+                </div>
+                <div class="d-flex align-items-start gap-3">
+                  <span class="vg-doc-badge-ico" style="width:36px; height:36px;" aria-hidden="true"><i class="fa fa-clock-o"></i></span>
+                  <div>
+                    <strong style="display:block; color:var(--vg-navy); font-size:0.82rem;">Consultation Timings</strong>
+                    <span style="color:var(--vg-text-soft);">Mon &ndash; Fri: 6:00 PM &ndash; 9:00 PM &middot; Sat &amp; Sun: By Appointment Only</span>
+                  </div>
+                </div>
+              </div>
+            </aside>
           </div>
 
-          <div class="vg-quick-card" data-fade="up" data-fade-delay="100">
-            <div>
-              <span class="vg-quick-icon"><i class="icofont-google-map"></i></span>
-              <span class="vg-kicker">Clinic Address</span>
-              <h3>Dr. VG Kidney Stone Clinic</h3>
-              <p style="margin:0;">
-                #14B, First Cross Street, Perumal Raja Garden, Reddiyarapalayam, Puducherry – 605010
-              </p>
-            </div>
-          </div>
+          <!-- Right Column: Modern Accessible Contact Form -->
+          <div class="col-lg-7" data-fade="right">
+            <div class="vg-form-card h-100 d-flex flex-column justify-content-between" style="border-top:4px solid var(--vg-teal);">
+              <div>
+                <span class="vg-eyebrow"><i class="fa fa-paper-plane"></i> Send an Inquiry</span>
+                <h2 id="contact-form-heading" class="vg-h2 mb-2">Contact With Us</h2>
+                <p style="color:var(--vg-text-soft); margin-bottom:24px;">Have a question about kidney stone treatment, diagnostic tests, or clinic hours? Fill out the form below and our clinic desk will reply promptly.</p>
 
-          <div class="vg-quick-card is-navy" data-fade="up" data-fade-delay="200">
-            <div>
-              <span class="vg-quick-icon"><i class="icofont icofont-wall-clock"></i></span>
-              <span class="vg-kicker">Open Hours</span>
-              <h3>Mon – Friday: 6 PM – 9 PM</h3>
-              <p style="margin:0;">
-                Saturday &amp; Sunday: By Appointment Only
-              </p>
+                <form id="vg-contact-form" novalidate aria-describedby="cnt-form-note">
+                  <p id="cnt-form-note" class="vg-field-hint" style="margin-bottom:16px;">Fields marked with <span style="color:#D92D20; font-weight:700;">*</span> are required.</p>
+                  <div class="vg-form-grid">
+                    <div class="vg-field">
+                      <label for="cnt-name">Full Name <span aria-hidden="true" style="color:#D92D20;">*</span></label>
+                      <input
+                        id="cnt-name"
+                        name="name"
+                        type="text"
+                        class="vg-input"
+                        placeholder="Enter your full name"
+                        autocomplete="name"
+                        required
+                        aria-required="true"
+                        aria-invalid="false"
+                        aria-describedby="cnt-name-hint cnt-name-err"
+                      />
+                      <span id="cnt-name-hint" class="vg-field-hint">Minimum 3 characters</span>
+                      <div id="cnt-name-err" class="vg-field-error" role="alert" aria-live="polite"></div>
+                    </div>
+
+                    <div class="vg-field">
+                      <label for="cnt-email">Email Address <span aria-hidden="true" style="color:#D92D20;">*</span></label>
+                      <input
+                        id="cnt-email"
+                        name="email"
+                        type="email"
+                        class="vg-input"
+                        placeholder="Enter your email address"
+                        autocomplete="email"
+                        required
+                        aria-required="true"
+                        aria-invalid="false"
+                        aria-describedby="cnt-email-hint cnt-email-err"
+                      />
+                      <span id="cnt-email-hint" class="vg-field-hint">We will send our reply to this email</span>
+                      <div id="cnt-email-err" class="vg-field-error" role="alert" aria-live="polite"></div>
+                    </div>
+
+                    <div class="vg-field">
+                      <label id="cnt-phone-label" for="cnt-phone">Phone Number <span aria-hidden="true" style="color:#D92D20;">*</span></label>
+                      <div id="cnt-phone-group" class="vg-phone-group">
+                        <span class="vg-phone-prefix" id="cnt-phone-prefix">+91</span>
+                        <input
+                          id="cnt-phone"
+                          name="phone"
+                          type="tel"
+                          inputmode="numeric"
+                          maxlength="10"
+                          class="vg-input"
+                          placeholder="Enter 10-digit mobile number"
+                          autocomplete="tel-national"
+                          required
+                          aria-required="true"
+                          aria-invalid="false"
+                          aria-labelledby="cnt-phone-label cnt-phone-prefix"
+                          aria-describedby="cnt-phone-hint cnt-phone-err"
+                        />
+                      </div>
+                      <span id="cnt-phone-hint" class="vg-field-hint">Digits only, exactly 10 digits</span>
+                      <div id="cnt-phone-err" class="vg-field-error" role="alert" aria-live="polite"></div>
+                    </div>
+
+                    <div class="vg-field">
+                      <label for="cnt-subj">Subject <span aria-hidden="true" style="color:#D92D20;">*</span></label>
+                      <input
+                        id="cnt-subj"
+                        name="subject"
+                        type="text"
+                        class="vg-input"
+                        placeholder="Enter inquiry subject"
+                        required
+                        aria-required="true"
+                        aria-invalid="false"
+                        aria-describedby="cnt-subj-hint cnt-subj-err"
+                      />
+                      <span id="cnt-subj-hint" class="vg-field-hint">Brief topic of your inquiry</span>
+                      <div id="cnt-subj-err" class="vg-field-error" role="alert" aria-live="polite"></div>
+                    </div>
+
+                    <div class="vg-field is-full">
+                      <label for="cnt-msg">Message <span aria-hidden="true" style="color:#D92D20;">*</span></label>
+                      <textarea
+                        id="cnt-msg"
+                        name="message"
+                        class="vg-textarea"
+                        placeholder="Write your message or question here"
+                        required
+                        aria-required="true"
+                        aria-invalid="false"
+                        aria-describedby="cnt-msg-hint cnt-msg-err"
+                      ></textarea>
+                      <span id="cnt-msg-hint" class="vg-field-hint">Minimum 10 characters</span>
+                      <div id="cnt-msg-err" class="vg-field-error" role="alert" aria-live="polite"></div>
+                    </div>
+                  </div>
+
+                  <div style="margin-top:22px;">
+                    <button type="submit" class="vg-btn vg-btn-primary"><i class="fa fa-paper-plane" aria-hidden="true"></i> Send Message</button>
+                  </div>
+
+                  <div class="vg-form-status" role="status" aria-live="polite"></div>
+                </form>
+              </div>
+
+              <div class="mt-4 pt-3 d-flex flex-wrap align-items-center justify-content-between gap-2" style="border-top:1px solid var(--vg-border); font-size:0.84rem; color:var(--vg-text-soft);">
+                <span><i class="fa fa-lock" style="color:var(--vg-teal);" aria-hidden="true"></i> Your inquiry is confidential and handled directly by our clinic desk.</span>
+                <a href="appointment.html" style="font-weight:700; color:var(--vg-teal);">Ready to book a time slot? Schedule here <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+              </div>
             </div>
           </div>
         </div>
@@ -290,7 +411,6 @@
                 <li><a href="service.html"><i class="fa fa-angle-right"></i> Urology Services</a></li>
                 <li><a href="about.html"><i class="fa fa-angle-right"></i> About Clinic</a></li>
                 <li><a href="appointment.html"><i class="fa fa-angle-right"></i> Book Consultation</a></li>
-                <li><a href="faq.html"><i class="fa fa-angle-right"></i> Patient FAQ</a></li>
                 <li><a href="contact.html"><i class="fa fa-angle-right"></i> Contact Us</a></li>
               </ul>
             </div>

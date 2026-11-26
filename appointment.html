@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="css/bootstrap.min.css" />
   <link rel="stylesheet" href="css/font-awesome.min.css" />
   <link rel="stylesheet" href="css/icofont.css" />
-  <link rel="stylesheet" href="css/vg-theme.css" />
+  <link rel="stylesheet" href="css/vg-theme.css?v=5" />
 </head>
 <body>
   <div class="vg-preloader" aria-hidden="true"><div class="vg-preloader-ring"></div></div>
@@ -64,7 +64,6 @@
                 </ul>
               </li>
               <li><a href="about.html">About Us</a></li>
-              <li><a href="faq.html">FAQ</a></li>
               <li><a href="contact.html">Contact</a></li>
             </ul>
           </nav>
@@ -109,7 +108,6 @@
           </ul>
         </li>
         <li><a href="about.html">About Clinic</a></li>
-        <li><a href="faq.html">Urology FAQ</a></li>
         <li><a href="contact.html">Contact Us</a></li>
       </ul>
       <div style="margin-top:auto; display:grid; gap:10px;">
@@ -120,90 +118,153 @@
   </div>
 
   <main>
-    <section class="vg-page-hero">
-      <div class="container vg-fade-hero">
-        <span class="vg-eyebrow vg-eyebrow-dark">Patient Scheduling</span>
-        <h1>Get Your Appointment</h1>
-        <p>Reserve your consultation with Dr. S. Vijay Ganapathy at our Reddiyarapalayam clinic in Puducherry.</p>
-        <ul class="vg-breadcrumb">
-          <li><a href="index.html">Home</a></li>
-          <li><i class="icofont-simple-right"></i></li>
-          <li>Appointment</li>
-        </ul>
+    <section class="vg-appt-banner">
+      <div class="vg-doc-banner-scrim"></div>
+      <div class="container position-relative" style="z-index:2;">
+        <div class="vg-doc-hero-copy vg-fade-hero">
+          <span class="vg-eyebrow vg-eyebrow-dark"><i class="fa fa-calendar-check-o"></i> Patient Scheduling &middot; Evening Clinic</span>
+          <h1>Book Your <span class="vg-doc-name-gold">Appointment <svg class="vg-doc-swoop" viewBox="0 0 280 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M4 13C72 4 190 2 276 11" stroke="url(#vgApptSwoop)" stroke-width="3.2" stroke-linecap="round"/><defs><linearGradient id="vgApptSwoop" x1="4" y1="13" x2="276" y2="11" gradientUnits="userSpaceOnUse"><stop stop-color="#f2c94c"/><stop offset="1" stop-color="#d4a017" stop-opacity="0.35"/></linearGradient></defs></svg></span></h1>
+          <p>Choose your visit type, urology specialty, and preferred evening slot with Dr. S. Vijay Ganapathy for instant WhatsApp scheduling.</p>
+          <ul class="vg-breadcrumb">
+            <li><a href="index.html">Home</a></li>
+            <li><i class="icofont-simple-right"></i></li>
+            <li>Book Appointment</li>
+          </ul>
+        </div>
       </div>
     </section>
 
-    <section class="vg-section vg-section-alabaster">
+    <section class="vg-section vg-section-alabaster" aria-labelledby="appt-heading">
       <div class="container">
-        <div class="vg-appointment-grid">
-          <div class="vg-form-card" data-fade="left">
-            <span class="vg-eyebrow">Direct WhatsApp Confirmation</span>
-            <h2 class="vg-serif" style="margin-bottom:8px;">Patient Appointment Form</h2>
-            <p style="color:var(--vg-muted); margin-bottom:22px;">Fill in your details below and submit to connect instantly with our clinic desk on WhatsApp (9444469194).</p>
-            <form class="vg-appointment-form" id="appointmentForm" novalidate>
-              <div class="vg-form-grid">
-                <div class="vg-field">
-                  <label for="app-name">Full Name *</label>
-                  <input id="app-name" name="name" type="text" class="vg-input" placeholder="Patient Name" required />
+        <div class="row g-4 align-items-start">
+          <!-- Left: Interactive 3-Step Patient Scheduler -->
+          <div class="col-lg-8" data-fade="left">
+            <div class="vg-form-card" style="border-top:4px solid var(--vg-teal);">
+              <span class="vg-eyebrow"><i class="fa fa-whatsapp"></i> Instant WhatsApp Scheduling</span>
+              <h2 id="appt-heading" class="vg-h2 mb-2">Reserve Your Consultation Slot</h2>
+              <p style="color:var(--vg-text-soft); margin-bottom:24px;">Select your consultation preferences below and confirm directly with our clinic desk on WhatsApp (9444469194).</p>
+
+              <form class="vg-appointment-form" id="appointmentForm" novalidate>
+                <!-- Step 1: Visit Type -->
+                <div class="mb-4">
+                  <div class="vg-appt-step-label"><span class="vg-appt-step-badge">1</span> Select Visit Type</div>
+                  <input type="hidden" name="visittype" value="New Consultation" />
+                  <div class="vg-choice-grid">
+                    <button type="button" class="vg-choice-btn is-active" data-group="visittype" data-value="New Consultation" aria-pressed="true"><i class="fa fa-user-plus"></i> New Consultation</button>
+                    <button type="button" class="vg-choice-btn" data-group="visittype" data-value="Follow-up Visit" aria-pressed="false"><i class="fa fa-repeat"></i> Follow-up Visit</button>
+                    <button type="button" class="vg-choice-btn" data-group="visittype" data-value="Report / Scan Review" aria-pressed="false"><i class="fa fa-file-text-o"></i> Scan / Report Review</button>
+                  </div>
                 </div>
-                <div class="vg-field">
-                  <label for="app-email">Email</label>
-                  <input id="app-email" name="email" type="email" class="vg-input" placeholder="Email Address" />
+
+                <!-- Step 2: Urology Specialty -->
+                <div class="mb-4">
+                  <div class="vg-appt-step-label"><span class="vg-appt-step-badge">2</span> Select Urology Specialty</div>
+                  <input type="hidden" name="department" value="Kidney Stone (RIRS / PCNL)" />
+                  <div class="vg-chip-wrap">
+                    <button type="button" class="vg-chip-btn is-active" data-group="department" data-value="Kidney Stone (RIRS / PCNL)" aria-pressed="true">Kidney Stone (RIRS / PCNL)</button>
+                    <button type="button" class="vg-chip-btn" data-group="department" data-value="Prostate & BPH Care" aria-pressed="false">Prostate &amp; BPH Care</button>
+                    <button type="button" class="vg-chip-btn" data-group="department" data-value="Andrology & Men's Health" aria-pressed="false">Andrology &amp; Men's Health</button>
+                    <button type="button" class="vg-chip-btn" data-group="department" data-value="Male Infertility" aria-pressed="false">Male Infertility</button>
+                    <button type="button" class="vg-chip-btn" data-group="department" data-value="Paediatric Urology" aria-pressed="false">Paediatric Urology</button>
+                    <button type="button" class="vg-chip-btn" data-group="department" data-value="Urogynaecology" aria-pressed="false">Urogynaecology</button>
+                  </div>
                 </div>
-                <div class="vg-field">
-                  <label for="app-phone">Phone Number *</label>
-                  <input id="app-phone" name="phone" type="tel" class="vg-input" placeholder="10-digit Mobile Number" required />
+
+                <!-- Step 3: Preferred Date & Time Slot -->
+                <div class="mb-4">
+                  <div class="vg-appt-step-label"><span class="vg-appt-step-badge">3</span> Choose Date &amp; Evening Slot</div>
+                  <input type="hidden" name="timeslot" value="6:00 PM – 7:00 PM" />
+                  <input type="hidden" name="doctor" value="Dr. S. Vijay Ganapathy" />
+                  <div class="row g-3 align-items-start">
+                    <div class="col-md-5">
+                      <label for="app-date" style="font-size:0.84rem; font-weight:600; color:var(--vg-navy); margin-bottom:6px; display:block;">Preferred Date</label>
+                      <input id="app-date" name="date" type="date" class="vg-input" />
+                    </div>
+                    <div class="col-md-7">
+                      <span style="font-size:0.84rem; font-weight:600; color:var(--vg-navy); margin-bottom:6px; display:block;">Preferred Time Window</span>
+                      <div class="vg-slot-grid">
+                        <button type="button" class="vg-slot-btn is-active" data-group="timeslot" data-value="6:00 PM – 7:00 PM" aria-pressed="true"><i class="fa fa-clock-o"></i> 6:00 – 7:00 PM</button>
+                        <button type="button" class="vg-slot-btn" data-group="timeslot" data-value="7:00 PM – 8:00 PM" aria-pressed="false"><i class="fa fa-clock-o"></i> 7:00 – 8:00 PM</button>
+                        <button type="button" class="vg-slot-btn" data-group="timeslot" data-value="8:00 PM – 9:00 PM" aria-pressed="false"><i class="fa fa-clock-o"></i> 8:00 – 9:00 PM</button>
+                        <button type="button" class="vg-slot-btn" data-group="timeslot" data-value="Weekend (By Appointment)" aria-pressed="false"><i class="fa fa-calendar"></i> Weekend Appt</button>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="vg-field">
-                  <label for="app-dept">Department</label>
-                  <select id="app-dept" name="department" class="vg-select">
-                    <option value="Urologist">Urologist</option>
-                    <option value="Andrologist">Andrologist</option>
-                    <option value="Kidney Stone Clinic">Kidney Stone Clinic</option>
-                    <option value="Prostate & Men's Health">Prostate &amp; Men's Health</option>
-                    <option value="Paediatric / Urogynaecology">Paediatric / Urogynaecology</option>
-                  </select>
+
+                <!-- Step 4: Patient Details -->
+                <div class="pt-3" style="border-top:1px solid var(--vg-border);">
+                  <div class="vg-appt-step-label"><span class="vg-appt-step-badge">4</span> Patient Details</div>
+                  <div class="vg-form-grid">
+                    <div class="vg-field">
+                      <label for="app-name">Patient Full Name <span aria-hidden="true" style="color:#D92D20;">*</span></label>
+                      <input id="app-name" name="name" type="text" class="vg-input" placeholder="Enter patient full name" required aria-required="true" aria-describedby="app-name-err" />
+                      <div id="app-name-err" class="vg-field-error" role="alert" aria-live="polite"></div>
+                    </div>
+                    <div class="vg-field">
+                      <label id="app-phone-label" for="app-phone">Mobile Number <span aria-hidden="true" style="color:#D92D20;">*</span></label>
+                      <div id="app-phone-group" class="vg-phone-group">
+                        <span class="vg-phone-prefix" id="app-phone-prefix">+91</span>
+                        <input id="app-phone" name="phone" type="tel" inputmode="numeric" maxlength="10" class="vg-input" placeholder="Enter 10-digit mobile number" required aria-required="true" aria-labelledby="app-phone-label app-phone-prefix" aria-describedby="app-phone-err" />
+                      </div>
+                      <div id="app-phone-err" class="vg-field-error" role="alert" aria-live="polite"></div>
+                    </div>
+                    <div class="vg-field is-full">
+                      <label for="app-email">Email Address (Optional)</label>
+                      <input id="app-email" name="email" type="email" class="vg-input" placeholder="Enter your email address" aria-describedby="app-email-err" />
+                      <div id="app-email-err" class="vg-field-error" role="alert" aria-live="polite"></div>
+                    </div>
+                    <div class="vg-field is-full">
+                      <label for="app-msg">Symptoms / Notes (Optional)</label>
+                      <textarea id="app-msg" name="message" class="vg-textarea" style="min-height:94px;" placeholder="Mention symptoms, scan details, or notes (optional)"></textarea>
+                    </div>
+                  </div>
                 </div>
-                <div class="vg-field">
-                  <label for="app-doc">Doctor</label>
-                  <select id="app-doc" name="doctor" class="vg-select">
-                    <option value="Dr. Vijay Ganapathy">Dr. Vijay Ganapathy</option>
-                  </select>
+
+                <div style="margin-top:22px; display:flex; flex-wrap:wrap; gap:12px;">
+                  <button type="submit" class="vg-btn vg-btn-primary"><i class="fa fa-whatsapp"></i> Confirm via WhatsApp</button>
+                  <a href="tel:+919444469179" class="vg-btn vg-btn-outline"><i class="fa fa-phone"></i> Call 9444469179</a>
                 </div>
-                <div class="vg-field">
-                  <label for="app-date">Preferred Date</label>
-                  <input id="app-date" name="date" type="date" class="vg-input" />
-                </div>
-                <div class="vg-field is-full">
-                  <label for="app-msg">Message / Symptoms</label>
-                  <textarea id="app-msg" name="message" class="vg-textarea" placeholder="Write your message or symptoms here..."></textarea>
-                </div>
-              </div>
-              <div style="margin-top:22px; display:flex; flex-wrap:wrap; gap:12px;">
-                <button type="submit" class="vg-btn vg-btn-primary"><i class="fa fa-whatsapp"></i> Book An Appointment</button>
-                <a href="tel:+919444469179" class="vg-btn vg-btn-outline"><i class="fa fa-phone"></i> Call 9444469179</a>
-              </div>
-              <div class="vg-form-status" role="status" aria-live="polite"></div>
-            </form>
+                <div class="vg-form-status" role="status" aria-live="polite"></div>
+              </form>
+            </div>
           </div>
 
-          <aside class="vg-clinic-aside" data-fade="right">
-            <div class="vg-clinic-aside-img">
-              <img src="clinic.jpg" alt="Dr. VG Kidney Stone Clinic Exterior Signboard in Puducherry" />
-            </div>
-            <div class="vg-clinic-aside-body">
-              <h3>Clinic Hours &amp; Visit Guide</h3>
-              <ul class="vg-hours-list">
-                <li>Monday – Friday <span>6:00 PM – 9:00 PM</span></li>
-                <li>Saturday &amp; Sunday <span>By Appointment Only</span></li>
-              </ul>
-              <ul class="vg-clinic-meta-list">
-                <li><i class="icofont-location-pin"></i> <span>#14B, First Cross Street, Perumal Raja Garden, Reddiyarapalayam, Puducherry – 605010</span></li>
-                <li><i class="fa fa-phone"></i> <span><a href="tel:+919444469179">9444469179</a> / <a href="tel:+919444469194">9444469194</a></span></li>
-                <li><i class="fa fa-file-text-o"></i> <span>Please carry recent ultrasound/CT KUB scans, urine reports, or prior prescriptions if available.</span></li>
-              </ul>
-            </div>
-          </aside>
+          <!-- Right: Prepare for Your Visit Guide -->
+          <div class="col-lg-4" data-fade="right">
+            <aside class="vg-clinic-aside vg-doc-aside" style="position:sticky; top:105px;" aria-label="Visit Preparation Guide">
+              <div class="vg-clinic-aside-img">
+                <img src="clinic.jpg" alt="Dr. VG Kidney Stone Clinic Exterior Signboard in Puducherry" />
+              </div>
+              <div class="vg-clinic-aside-body">
+                <div>
+                  <span class="vg-eyebrow vg-eyebrow-dark" style="margin-bottom:8px;"><i class="fa fa-clipboard"></i> Visit Checklist</span>
+                  <h3>Prepare for Your Visit</h3>
+                  <span style="color:var(--vg-gold-bright); font-size:0.84rem; font-weight:600;">Dr. S. Vijay Ganapathy &middot; Consultant Urologist</span>
+                </div>
+
+                <ul class="vg-appt-checklist">
+                  <li><i class="fa fa-check-circle"></i> <span>Bring recent <strong>Ultrasound / CT KUB / X-Ray</strong> scans if already done.</span></li>
+                  <li><i class="fa fa-check-circle"></i> <span>Carry latest <strong>urine routine &amp; serum creatinine</strong> reports.</span></li>
+                  <li><i class="fa fa-check-circle"></i> <span>Keep a list of ongoing medications or previous prescriptions.</span></li>
+                  <li><i class="fa fa-check-circle"></i> <span>Arrive <strong>10 minutes early</strong> for smooth registration.</span></li>
+                </ul>
+
+                <div style="border-top:1px solid rgba(255,255,255,0.14); padding-top:14px;">
+                  <strong style="display:block; color:var(--vg-gold-bright); font-size:0.84rem; margin-bottom:8px;">Evening Consultation Hours</strong>
+                  <ul class="vg-hours-list">
+                    <li>Monday &ndash; Friday <span>6:00 PM &ndash; 9:00 PM</span></li>
+                    <li>Saturday &amp; Sunday <span>By Appointment Only</span></li>
+                  </ul>
+                </div>
+
+                <div style="background:rgba(242,201,76,0.12); border:1px solid rgba(242,201,76,0.3); border-radius:12px; padding:12px 14px;">
+                  <small style="display:block; color:var(--vg-gold-bright); font-weight:700;">Need Directions or General Help?</small>
+                  <a href="contact.html" style="color:#FFFFFF; font-size:0.84rem; font-weight:600; text-decoration:underline;">View Clinic Map &amp; Contact Details &rarr;</a>
+                </div>
+              </div>
+            </aside>
+          </div>
         </div>
       </div>
     </section>
@@ -269,7 +330,6 @@
                 <li><a href="service.html"><i class="fa fa-angle-right"></i> Urology Services</a></li>
                 <li><a href="about.html"><i class="fa fa-angle-right"></i> About Clinic</a></li>
                 <li><a href="appointment.html"><i class="fa fa-angle-right"></i> Book Consultation</a></li>
-                <li><a href="faq.html"><i class="fa fa-angle-right"></i> Patient FAQ</a></li>
                 <li><a href="contact.html"><i class="fa fa-angle-right"></i> Contact Us</a></li>
               </ul>
             </div>
