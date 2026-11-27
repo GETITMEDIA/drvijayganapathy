@@ -3388,7 +3388,7 @@ h6 {
 @media (max-width: 767px) {
   .vg-doc-banner {
     min-height: auto;
-    background-position: 78% center;
+    background-position: 78% top;
     padding: 40px 0 48px;
   }
   .vg-doc-banner-scrim {
@@ -4002,11 +4002,11 @@ h6 {
   color: var(--vg-white);
 }
 
-/* Back-to-top button */
+/* Back-to-top button (stacked cleanly above floating WhatsApp) */
 .vg-scroll-top {
   position: fixed;
-  right: 20px;
-  bottom: 20px;
+  right: 22px;
+  bottom: 86px;
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -4036,24 +4036,66 @@ h6 {
   color: var(--vg-navy);
 }
 
-align-items: center;
-justify-content: center;
-cursor: pointer;
-opacity: 0;
-visibility: hidden;
-transform: translateY(10px);
-transition: all 0.25s ease;
-z-index: 950;
+/* Floating WhatsApp Button with Blink/Pulse Ring */
+.vg-whatsapp-float {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: #25D366;
+  color: #FFFFFF;
+  font-size: 1.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.42);
+  border: 2px solid rgba(255, 255, 255, 0.85);
+  z-index: 960;
+  text-decoration: none;
+  animation: vgWaBlink 1.8s ease-in-out infinite;
+  transition: transform 0.25s ease, background-color 0.25s ease;
 }
 
-.vg-scroll-top.is-visible {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
+.vg-whatsapp-float::before {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 2px solid rgba(37, 211, 102, 0.65);
+  animation: vgWaRing 1.8s ease-out infinite;
+  pointer-events: none;
 }
 
-.vg-scroll-top:hover {
-  background: var(--vg-navy);
+.vg-whatsapp-float:hover {
+  background: #1EBE57;
+  color: #FFFFFF;
+  transform: scale(1.08);
+}
+
+@keyframes vgWaBlink {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 8px 24px rgba(37, 211, 102, 0.42);
+  }
+  50% {
+    opacity: 0.78;
+    transform: scale(1.06);
+    box-shadow: 0 0 0 8px rgba(37, 211, 102, 0.18), 0 10px 28px rgba(37, 211, 102, 0.58);
+  }
+}
+
+@keyframes vgWaRing {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.85;
+  }
+  100% {
+    transform: scale(1.38);
+    opacity: 0;
+  }
 }
 
 /* ==========================================================================
@@ -4107,7 +4149,7 @@ z-index: 950;
   }
 
   .vg-hero-bg img {
-    object-position: 68% center;
+    object-position: 68% top;
     opacity: 0.48;
   }
 
@@ -4208,22 +4250,33 @@ z-index: 950;
 
   .vg-hero-slide {
     min-height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .vg-hero-bg {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    height: 220px;
+    border-bottom: 2px solid var(--vg-gold-bright);
   }
 
   .vg-hero-bg img {
-    object-position: 70% center;
-    opacity: 0.25;
+    object-position: 78% top;
+    opacity: 1;
   }
 
   .vg-hero-scrim,
   .vg-hero-scrim.is-laser,
   .vg-hero-scrim.is-wing {
-    background: linear-gradient(180deg, rgba(246, 250, 251, 0.94) 0%, rgba(246, 250, 251, 0.86) 55%, rgba(246, 250, 251, 0.95) 100%);
+    display: none;
   }
 
   .vg-hero-container {
-    padding-top: 28px;
-    padding-bottom: 22px;
+    padding-top: 20px;
+    padding-bottom: 18px;
   }
 
   .vg-hero-heading {
@@ -4254,11 +4307,25 @@ z-index: 950;
 
   .vg-hero-tab {
     text-align: center;
-    padding: 8px 6px 12px;
+    padding: 6px 6px 9px;
+    border-radius: 9px;
   }
 
   .vg-hero-nav {
-    justify-content: space-between;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .vg-hero-arrow {
+    width: 34px;
+    height: 34px;
+    min-height: 34px !important;
+    font-size: 0.8rem;
+  }
+
+  .vg-hero-counter {
+    padding: 4px 10px;
+    font-size: 0.74rem;
   }
 
   .vg-hero-metrics {
@@ -4266,12 +4333,22 @@ z-index: 950;
     gap: 10px;
   }
 
+  .vg-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
   .vg-hero-actions .vg-btn {
-    width: 100%;
+    width: auto;
+    flex: 0 1 auto;
   }
 
   .vg-brand img {
-    height: 56px;
+    height: 64px;
+    width: auto;
+    max-width: calc(100vw - 88px);
+    object-fit: contain;
   }
 
   .vg-dept-tabs {
@@ -4283,5 +4360,449 @@ z-index: 950;
 
   .vg-dept-tab {
     flex-shrink: 0;
+  }
+}
+
+/* ==========================================================================
+   Strict Responsive Coverage: Tablet (768px - 1024px) & Mobile (<= 767px, 375px, 320px)
+   Desktop (1025px+) remains completely unchanged above.
+   ========================================================================== */
+@media (max-width: 1024px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  img,
+  video,
+  iframe {
+    max-width: 100%;
+  }
+
+  /* Ensure touch-friendly 44px+ tap targets across tablet & mobile */
+  .vg-btn,
+  .vg-mobile-toggle,
+  .vg-hero-arrow,
+  .vg-choice-btn,
+  .vg-slot-btn,
+  .vg-chip-btn,
+  .vg-filter-btn,
+  .vg-acc-trigger,
+  .vg-mobile-links > li > a,
+  .vg-mobile-sub-toggle {
+    min-height: 44px;
+  }
+
+  .vg-footer-social a {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  /* Reset sticky sidebars cleanly on stacked tablet/mobile layouts */
+  .vg-clinic-aside {
+    position: static !important;
+  }
+
+  /* Smooth 1024px tablet grid & nav adjustments */
+  .vg-nav > li > a {
+    padding: 8px 9px;
+    font-size: 0.86rem;
+  }
+
+  .vg-nav-actions .vg-btn {
+    padding: 9px 14px;
+    font-size: 0.84rem;
+  }
+
+  .vg-doc-exp-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .vg-section {
+    padding: 34px 0;
+  }
+
+  .vg-section-sm {
+    padding: 22px 0;
+  }
+
+  .vg-section-header {
+    margin-bottom: 24px;
+  }
+
+  /* Compact, proportional mobile typography across ALL pages */
+  .vg-hero-heading {
+    font-size: clamp(1.38rem, 5.2vw, 1.68rem) !important;
+    line-height: 1.2;
+    margin-bottom: 10px;
+  }
+
+  main h2,
+  .vg-h2,
+  .vg-section-header h2,
+  .vg-cta-banner h2,
+  .vg-card h2,
+  h2.vg-serif {
+    font-size: clamp(1.18rem, 4.4vw, 1.38rem) !important;
+    line-height: 1.26;
+  }
+
+  main h3,
+  .vg-clinic-aside-body h3,
+  .vg-service-card h3,
+  .vg-pillar-card h3,
+  .vg-quick-card h3,
+  .vg-editorial-card h3,
+  .vg-testimonial-card h3,
+  .vg-dept-panel h3 {
+    font-size: clamp(1rem, 3.8vw, 1.14rem) !important;
+    line-height: 1.3;
+  }
+
+  main h4,
+  .vg-timeline-item h4,
+  .vg-doc-exp-head h4,
+  .vg-gallery-caption h4 {
+    font-size: 0.94rem !important;
+    line-height: 1.32;
+  }
+
+  main p,
+  main li,
+  .vg-service-card p,
+  .vg-editorial-card p,
+  .vg-pillar-card p,
+  .vg-quick-card p {
+    font-size: 0.875rem;
+    line-height: 1.55;
+  }
+
+  .vg-doc-quote-card blockquote {
+    font-size: 0.96rem !important;
+    line-height: 1.48;
+  }
+
+  /* Prevent CSS Grid minmax(auto, 1fr) blowout on narrow phones (320px-414px) */
+  .vg-quick-grid,
+  .vg-pillars-grid,
+  .vg-services-grid,
+  .vg-testimonials-grid,
+  .vg-cards-grid-3,
+  .vg-cards-grid-2,
+  .vg-cred-lists,
+  .vg-form-grid,
+  .vg-footer-grid,
+  .vg-appointment-grid,
+  .vg-specialist-grid,
+  .vg-dept-panel.is-active,
+  .vg-cta-banner,
+  .vg-proc-row,
+  .vg-doc-exp-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  /* Crisp 2x2 mobile grids instead of huge tall stacked cards */
+  .vg-stats-grid,
+  .vg-moments-grid,
+  .vg-doc-hero-badges,
+  .vg-footer-pillars {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px;
+  }
+
+  .vg-stat-item {
+    padding: 16px 10px;
+  }
+
+  .vg-stat-icon {
+    width: 38px;
+    height: 38px;
+    font-size: 1.05rem;
+    margin-bottom: 6px;
+  }
+
+  .vg-stat-number {
+    font-size: clamp(1.2rem, 4.6vw, 1.5rem) !important;
+  }
+
+  .vg-stat-label {
+    font-size: 0.74rem;
+    line-height: 1.3;
+  }
+
+  .vg-moment-body {
+    padding: 10px 10px 12px;
+  }
+
+  .vg-moment-body h3 {
+    font-size: 0.84rem !important;
+    margin-bottom: 3px;
+  }
+
+  .vg-moment-body p {
+    font-size: 0.72rem;
+    line-height: 1.35;
+    margin-bottom: 6px;
+  }
+
+  .vg-doc-badge-card {
+    padding: 11px 10px;
+    gap: 8px;
+    align-items: flex-start;
+  }
+
+  .vg-doc-badge-ico {
+    width: 32px;
+    height: 32px;
+    font-size: 0.88rem;
+    border-radius: 8px;
+  }
+
+  .vg-doc-badge-card strong {
+    font-size: 0.78rem;
+    line-height: 1.2;
+  }
+
+  .vg-doc-badge-card > div span {
+    font-size: 0.68rem;
+    line-height: 1.25;
+  }
+
+  .vg-footer-pillars {
+    gap: 0;
+  }
+
+  .vg-fp-item {
+    padding: 11px 10px;
+    font-size: 0.76rem;
+    gap: 7px;
+  }
+
+  .vg-fp-item:nth-child(odd) {
+    border-left: 0;
+  }
+
+  .vg-fp-item:nth-child(even) {
+    border-left: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .vg-fp-item:nth-child(n + 3) {
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  /* Compact card & timeline padding */
+  .vg-card,
+  .vg-service-card,
+  .vg-pillar-card,
+  .vg-quick-card,
+  .vg-editorial-card,
+  .vg-testimonial-card,
+  .vg-doc-exp-card,
+  .vg-doc-step-card {
+    padding: 16px 15px;
+  }
+
+  .vg-timeline {
+    padding-left: 22px;
+    gap: 12px;
+  }
+
+  .vg-timeline-item {
+    padding: 14px 14px;
+  }
+
+  .vg-timeline-item::before {
+    left: -30px;
+    top: 18px;
+    width: 12px;
+    height: 12px;
+  }
+
+  .vg-doc-tl-ico,
+  .vg-doc-exp-ico-teal {
+    width: 38px;
+    height: 38px;
+    font-size: 1rem;
+    border-radius: 10px;
+  }
+
+  .vg-appointment-grid > *,
+  .vg-form-grid > *,
+  .vg-field,
+  .vg-pillars-grid > *,
+  .vg-cards-grid-2 > *,
+  .vg-cards-grid-3 > *,
+  .vg-services-grid > *,
+  .vg-quick-grid > *,
+  .vg-hero-slide-grid > *,
+  .vg-footer-grid > * {
+    min-width: 0;
+  }
+
+  /* Mobile-proportioned buttons & tabs */
+  .vg-btn {
+    white-space: normal;
+    text-align: center;
+    max-width: 100%;
+    min-height: 38px !important;
+    padding: 8px 15px;
+    font-size: 0.82rem;
+    gap: 6px;
+  }
+
+  .vg-cta-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .vg-cta-actions .vg-btn,
+  .vg-appointment-form .vg-btn,
+  #vg-contact-form .vg-btn {
+    width: auto;
+    justify-content: center;
+  }
+
+  .vg-dept-tab,
+  .vg-filter-btn,
+  .vg-choice-btn,
+  .vg-slot-btn,
+  .vg-chip-btn {
+    min-height: 34px !important;
+    padding: 6px 11px;
+    font-size: 0.76rem;
+  }
+
+  .vg-slot-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .vg-testi-arrow {
+    width: 36px;
+    height: 36px;
+    min-height: 36px !important;
+    font-size: 0.85rem;
+  }
+
+  /* 16px input font-size prevents unwanted iOS Safari focus zoom */
+  .vg-input,
+  .vg-select,
+  .vg-textarea {
+    font-size: 16px;
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  /* Compact subpage banners on mobile */
+  .vg-page-hero,
+  .vg-page-hero.has-bg,
+  .vg-contact-banner,
+  .vg-appt-banner,
+  .vg-doc-banner {
+    min-height: 0;
+    padding: 24px 0 26px;
+    background-position: 74% top;
+  }
+
+  .vg-page-hero .vg-eyebrow,
+  .vg-contact-banner .vg-eyebrow,
+  .vg-appt-banner .vg-eyebrow {
+    margin-bottom: 6px;
+    padding: 4px 10px;
+    font-size: 0.68rem;
+  }
+
+  .vg-page-hero h1,
+  .vg-contact-banner h1,
+  .vg-appt-banner h1,
+  .vg-doc-banner h1 {
+    font-size: clamp(1.38rem, 5.2vw, 1.75rem);
+    margin-bottom: 6px;
+  }
+
+  .vg-page-hero p,
+  .vg-contact-banner p,
+  .vg-appt-banner p,
+  .vg-doc-banner p {
+    font-size: 0.84rem;
+    line-height: 1.45;
+    margin-bottom: 10px;
+  }
+
+  .vg-contact-banner .vg-doc-banner-scrim,
+  .vg-appt-banner .vg-doc-banner-scrim {
+    background: linear-gradient(180deg, rgba(6, 22, 44, 0.90) 0%, rgba(6, 22, 44, 0.80) 60%, rgba(6, 22, 44, 0.92) 100%);
+  }
+
+  .vg-h2,
+  .vg-section-header h2,
+  .vg-page-hero h1,
+  .vg-contact-banner h1,
+  .vg-appt-banner h1,
+  .vg-doc-banner h1 {
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+  table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .vg-cta-banner {
+    padding: 22px 16px;
+  }
+
+  .vg-doc-aside .vg-clinic-aside-body,
+  .vg-form-card {
+    padding: 18px 15px;
+  }
+}
+
+@media (max-width: 420px) {
+  .container {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .vg-topbar-right {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px 12px;
+    font-size: 0.76rem;
+  }
+
+  .vg-brand img {
+    height: 58px;
+    max-width: calc(100vw - 84px);
+  }
+
+  .vg-hero-heading {
+    font-size: clamp(1.32rem, 5vw, 1.56rem) !important;
+  }
+
+  .vg-doc-banner h1,
+  .vg-page-hero h1,
+  .vg-contact-banner h1,
+  .vg-appt-banner h1 {
+    font-size: clamp(1.3rem, 5.2vw, 1.62rem);
+  }
+
+  .vg-hero-tabs {
+    gap: 6px;
+  }
+
+  .vg-phone-prefix {
+    padding: 0 10px;
+    font-size: 0.86rem;
+  }
+
+  .vg-form-card {
+    padding: 16px 14px;
   }
 }
